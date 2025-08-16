@@ -1,5 +1,4 @@
-<?php
-
+<?php      
 class Database {
     private static $host = 'i3px.your-database.de';
     private static $port = '3306';
@@ -18,12 +17,13 @@ class Database {
                 );
                 self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $e) {
-                die("Fehler: " . $e->getMessage());
+                error_log("Fehler bei der DB-Verbindung: " . $e->getMessage());
+                header("HTTP/1.1 500 Internal Server Error");
+                exit;
             }
         }
         return self::$connection;
     }
 }
-
 // Verbindung abrufen
 $connection = Database::connect();

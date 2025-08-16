@@ -18,7 +18,7 @@ if (isset($_GET['page'])) {
     <div class="page-function">
         <ul>
             <li>
-                <button><a href="../acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite bearbeiten</a></button>
+                <button><a href="../1.0.0/acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite bearbeiten</a></button>
             </li>
         </ul>
     </div>
@@ -29,24 +29,23 @@ if (isset($_GET['page'])) {
 
 <?php if ($gelistetAufGitHub): ?>
     <?php 
-        $gitHubMain = "https://github.com/sven-berger/codevoyage/blob/main/lib";
+        $gitHubMain = "https://github.com/sven-berger/codevoyage/blob/main/1.0.0/lib";
         $gitHubLinks = [
-            "Bibliothek" => "<a href='{$gitHubMain}/pages/{$page}.page.php' target='_blank' class='link-success fw-bolder'>{$page}.lib.php</a>",
-            "Klasse" => "<a href='{$gitHubMain}/class/{$page}.class.php' target='_blank' class='link-success fw-bolder'>{$page}.class.php</a>",
-            "Formular" => "<a href='{$gitHubMain}/forms/{$page}.form.php' target='_blank' class='link-success fw-bolder'>{$page}.form.php</a>",
+            "Bibliothek" => "<a href='{$gitHubMain}/{$page}.lib.php' target='_blank'>{$page}.lib.php</a>",
+            "Klasse" => "<a href='{$gitHubMain}/class/{$page}.class.php' target='_blank'>{$page}.class.php</a>",
+            "Formular" => "<a href='{$gitHubMain}/forms/{$page}.form.php' target='_blank'>{$page}.form.php</a>",
         ];
     ?>
-    <div class="gelistetAufGitHub bg-white border p-3 rounded-3">
-        <h6>Dateien auf GitHub</h4>
-        <ul class="list-unstyled github p-0 mb-0">
+    <div class="gelistetAufGitHub">
+        <h4 class="sectionHeader">Dateien auf GitHub</h4>
+        <ul class="gitHub">
             <?php foreach ($gitHubLinks as $key => $value): ?>
-            <li><span class='gitHub-Key text-danger fw-bolder'><?= $key; ?></span>: <span><?= $value; ?></span></li>
+            <li><span class='gitHub-Key'><?= $key; ?></span>: <span class='gitHub-Value'><?= $value; ?></span></li>
             <?php endforeach; ?>  
         </ul>
     </div>
 <?php endif; ?>
 </div>
-            </div>
 </div>
 
 <!-- TinyMCE-Editor einbinden -->
@@ -57,8 +56,8 @@ tinymce.init({
     license_key: 'gpl',
     content_css:
     [
-        'https://codevoyage.samwilliam.de/3.0.0/highlightjs/styles/default.min.css',
-        'https://codevoyage.samwilliam.de/2.0.0/styles/te-editor.css'
+        'https://codevoyage.samwilliam.de/3.0.0/assets/highlightjs/styles/default.min.css',
+        'https://codevoyage.samwilliam.de/2.0.0/styles/tm-editor.css'
     ],
     menubar: false,
     language: 'de',
@@ -69,18 +68,5 @@ tinymce.init({
 });
 </script>
 
-<!-- Bootstrap Bundle mit Popper einbinden -->
-<script src="https://codevoyage.samwilliam.de/3.0.0/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
-
-<style>
-    .gelistetAufGitHub {
-        margin-top: auto;
-    }
-
-    .gelistetAufGitHub li a {
-        text-decoration: none;
-    }
-</style>

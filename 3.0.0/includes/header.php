@@ -1,68 +1,33 @@
-<?php
-ob_start();
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/session.php");
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
 ?>
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php if ($pageTitle == ''): ?>JavaScript | samwilliam<?php else: ?><?= $pageTitle; ?><?php endif; ?></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>samwilliam.de</title>
 
-<!-- Font Awesome 6 Free einbinden -->
-<link rel="stylesheet" href="https://codevoyage.samwilliam.de/3.0.0/assets/fontawesome/css/all.min.css">
+    <!-- Font Awesome 6 Free einbinden -->
+    <link rel="stylesheet" href="https://codevoyage.samwilliam.de/3.0.0/assets/fontawesome/css/all.min.css">
 
-<!-- Bootstrap einbinden -->
-<link href="https://codevoyage.samwilliam.de/3.0.0/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap einbinden -->
+    <link href="https://codevoyage.samwilliam.de/3.0.0/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Eigene CSS -->
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/css.php"); ?>
+    <!-- HightLight.js einbinden -->
+    <link rel="stylesheet" href="https://codevoyage.samwilliam.de/3.0.0/assets/highlightjs/styles/default.min.css">
+    <script src="https://codevoyage.samwilliam.de/3.0.0/assets/highlightjs/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
-<!-- Google Fonts: Roboto -->
-<style>
-/* Für die normale Schriftbreite */
-@font-face {
-  font-family: 'Roboto';
-  src: url('https://codevoyage.samwilliam.de/3.0.0/assets/fonts/roboto/Roboto-Regular.ttf') format('ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Für die dickere Schriftbreite */
-@font-face {
-  font-family: 'Roboto';
-  src: url('https://codevoyage.samwilliam.de/3.0.0/assets/fonts/roboto/Roboto-Bold.ttf') format('ttf');
-  font-weight: 700;
-    font-style: normal;
-}
-</style>
-
-<!-- Eigene JSON-Liste -->
-<script src="/assets/jsonList.js"></script>
+    <!-- Angelegte Stylesheets einbinden -->
+    <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/css.php"); ?>
 </head>
 
-<body class="bg-primary-subtle p-0 m-0 d-flex flex-column vh-100 fs-6" style="font-family: 'Roboto', sans-serif;">
-
-<!-- Navigation -->
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/nav.php"); ?>
-
-<!-- Beginn des Inhaltes -->
-<div class="container">
-<div class="row">
-
-<!-- Linke Seitenleiste -->
-<div class="col-md-3">
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/sidebarLeft.php"); ?>
-</div>
-  
-<!-- Hauptinhalt -->
-<div class="col-md-9">
-<?php if ($pageTitle == ''): ?>
-  <div class="mt-3"></div>
-<?php else: ?>
-  <div id="siteContent" class="bg-white p-3 rounded-3 mt-3 mb-3 border border-primary-subtle container shadow-sm">
-    <h3 class="text-center fw-light"><?= $pageTitle; ?></h3>
-  </div>
-<?php endif; ?>
-
-<main class="bg-white p-3 border border-primary-subtle rounded-3 container shadow-sm">
+<body class="d-flex flex-column vh-100">
+    <div class="d-flex flex-grow-1">
+    <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/seitenleiste.php"); ?>
+    <main class="content bg-white p-3 flex-grow-1">
+    <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/navigation.php"); ?>
+    <div class="bg-white round rounded-3 border p-3">

@@ -1,39 +1,35 @@
-<div class="sidebar d-flex flex-column">
-    <nav class="nav1 text-white p-3">
-        <h6 class="mb-3">Eigene Werke</h6>
-        <ul class="list-unstyled">
-            <!-- <li class="nav-item"><a href="index.php?page=zahlen-raten" class="nav-link">Zahlen raten</a></li>
-            <li class="nav-item"><a href="index.php?page=mini-taschenrechner" class="nav-link">Mini-Taschenrechner</a></li>
-            <li class="nav-item"><a href="index.php?page=raffle" class="nav-link">Mini-Gewinnspiel</a></li>
-            <li class="nav-item"><a href="index.php?page=bankaccounts" class="nav-link">Bankkonten</a></li> -->
-            <li class="nav-item"><a href="index.php?page=ortsliste" class="nav-link">Ortsliste (Deutschland)</a></li>
-            <li class="nav-item"><a href="index.php?page=zeitzonen" class="nav-link">Zeitzonen <strong>(1.0 Alpha 1)</strong></a></li>
+<div class="sidebar">
+    <h3>Eigene Werke</h3>
+    <ul>
+        <li><a href="../1.0.0/index.php?page=zahlen-raten">Zahlen raten</a></li>
+        <li><a href="../1.0.0/index.php?page=mini-taschenrechner">Mini-Taschenrechner</a></li>
+        <li><a href="../1.0.0/index.php?page=raffle">Mini-Gewinnspiel</a></li>
+        <li><a href="../1.0.0/index.php?page=bankaccounts">Bankkonten</a></li>
+        <li><a href="../1.0.0/index.php?page=ortsliste">Ortsliste</a></li>
+    </ul>
+    <h3>Spielerein</h3>
+    <ul>
+        <li><a href="../1.0.0/index.php?page=text-ausgeben">Text ausgeben (In einer Schleife)</a></li>
+        <li><a href="../1.0.0/index.php?page=zahlen-ausgeben">Zahlen ausgeben (In einer Schleife)</a></li>
+    </ul>
+    <h3>Sonstiges</h3>
+    <ul>
+        <li><a href="../1.0.0/index.php?page=einbindung-tinymce">Einbindung: TinyMCE Editor</a></li>
+    </ul>
+
+    <div class="sidebar-end">  
+    <?php if (!isset($_SESSION['benutzername'])): ?>
+        <?php
+            include("../1.0.0/lib/forms/login.form.php");
+            if (isset($_POST['benutzername']) && isset($_POST['passwort'])) {
+                require("../1.0.0/lib/login.lib.php");
+            }
+        ?>
+    <?php else: ?>
+        <ul>
+            <li><a href="../1.0.0/index.php?page=logout">Ausloggen</a></li>
+            <li><a href="../1.0.0/acp/index.php">Administrationsbereich</a></li>
         </ul>
-        <h6 class="mb-3">Spielerein</h5>
-        <ul class="list-unstyled">
-            <li class="nav-item"><a href="https://samwilliam.de/web-kompakt/" class="nav-link">Webentwicklung kompakt</a></li>
-        </ul>
-        <!---
-        <h6 class="mb-3">Sonstiges</h5>
-        <ul class="list-unstyled">
-            <li class="nav-item"><a href="index.php?page=einbindung-tinymce" class="nav-link">Einbindung: TinyMCE Editor</a></li>
-        </ul> -->
-    </nav>
-    
-    <nav class="nav2 text-white p-3">
-        <form method="POST" action="" class="d-flex flex-column">
-            <div class="mb-3">
-                <label for="username" class="form-label">Benutzername</label>
-                <input type="text" class="form-control" id="username" name="username" required>
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Passwort</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <button type="submit" class="mb-2 btn btn-primary">Einloggen</button>
-            <button type="reset" class="mb-2 btn btn-secondary">Passwort vergessen</button>
-            <a href="register.html" class="mb-2 btn btn-danger">Registrieren</a>
-            <a href="../v1/" class="mb-2 btn btn-warning" style="margin-top: 20px;">Alte Webseite</a>
-        </form> 
-    </nav>
+    <?php endif; ?>
+    </div>
 </div>

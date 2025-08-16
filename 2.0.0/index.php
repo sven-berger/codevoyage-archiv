@@ -1,5 +1,4 @@
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/header.php"); ?>
-
+<?php require_once("includes/header.php"); ?>
 <?php
     // Standardseite setzen
     $page = $_GET['page'] ?? '';
@@ -11,14 +10,13 @@
     }
 
     // Pfad zur Datei
-    $filePath = "lib/pages/" . $page . ".page.php";
+    $filePath = "lib/" . $page . ".lib.php";
 
     // Datei einbinden, wenn sie existiert
     if (file_exists($filePath)) {
         include $filePath;
     } else {
-        require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/lib/errors/404.php");
+        include "lib/errors/404.php";
     }
 ?>
-
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/footer.php"); ?>
+<?php require_once("includes/footer.php"); ?>
