@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "titel": "Test ",
+        "beschreibung": "Test ",
+        "inhalt": "<p>Test<\/p>",
+        "kategorie": "News",
+        "erstellt_am": "2025-05-15 14:16:02",
+        "geaendert_am": null
+    },
+    {
+        "id": 2,
+        "titel": "Test 2",
+        "beschreibung": "Test 2",
+        "inhalt": "<p>Test 2<\/p>",
+        "kategorie": "Tutorials",
+        "erstellt_am": "2025-05-15 14:16:10",
+        "geaendert_am": null
+    },
+    {
+        "id": 3,
+        "titel": "Test 3",
+        "beschreibung": "Test 3",
+        "inhalt": "<p>Test 3<\/p>",
+        "kategorie": "Allgemein",
+        "erstellt_am": "2025-05-15 14:16:17",
+        "geaendert_am": null
+    }
+]

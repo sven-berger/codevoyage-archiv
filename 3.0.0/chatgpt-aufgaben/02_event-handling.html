@@ -1,0 +1,97 @@
+<!---
+    Erstelle einen Button mit der ID farbeWechseln.
+    Wenn man darauf klickt, soll sich die Hintergrundfarbe der Seite zufällig ändern.
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Handling</title>
+</head>
+
+<body id="body">
+    <form style="display: grid;" method="POST" action="">
+        <label id="label" for="farbAuswahl" name="farbAuswahl">Bitte wähle die Farbe aus</label>
+        <select id="farbAuswahl" name="farbAuswahl">
+            <option value="Blau">Blau</option>
+            <option value="Rot">Rot</option>
+            <option value="Gold">Gold</option>
+        </select>
+        <button type="submit" id="farbeWechseln">Farbe wechsel dich</button>
+    </form>
+</body>
+    
+<script>
+    document.getElementById("farbeWechseln").addEventListener("click", function(e) {
+        e.preventDefault();
+        const farbAuswahl = document.getElementById("farbAuswahl");
+        const body = document.getElementById("body");
+        const label = document.getElementById("label");
+
+        // Vorherige Farbkategorien entfernen
+        label.classList.remove("labelBlau", "labelRot", "labelGold");
+        body.classList.remove("blue", "red", "gold");
+
+        if (farbAuswahl.value === "Blau") {
+            body.classList.add("blue");
+            label.classList.add(`label${farbAuswahl.value}`);
+        } else if (farbAuswahl.value === "Rot") {
+            body.classList.add("red");
+            label.classList.add(`label${farbAuswahl.value}`);
+        } else if (farbAuswahl.value === "Gold") {
+            body.classList.add("gold");
+            label.classList.add(`label${farbAuswahl.value}`);
+        }
+        });
+</script>
+      
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+label {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+select {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button {
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #fafafa;
+    border: 1px solid #ccc;
+    color: #000;
+    padding: 10px;
+}
+
+.blue {
+    background-color: blue;
+}
+    
+.red {
+    background-color: red;
+}
+    
+.gold {
+    background-color: gold;
+}
+
+.labelBlau, .labelRot {
+    color: #fff !important;
+}
+
+.labelGold {
+    color: darkred;
+}
+
+</style>
+</body>
+</html>

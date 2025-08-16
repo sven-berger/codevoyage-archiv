@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule \.(js|css|json|jpg|jpeg|png|gif|svg|woff2?|ttf|eot|ico)$ - [L]
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]

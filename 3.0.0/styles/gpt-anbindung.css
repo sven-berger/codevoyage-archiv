@@ -1,0 +1,9 @@
+.chatbot {
+    height: 564px !important;
+    max-height: 564px !important;
+}
+
+#chatContent {
+    max-height: 450px !important;
+    overflow-y: auto;
+}

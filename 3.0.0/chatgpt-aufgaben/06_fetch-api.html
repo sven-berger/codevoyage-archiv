@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch-API</title>
+</head>
+<body>
+    <button id="ladeWitz">Lade einen Witz</button>
+    <p id="setup"></p>
+    <p id="punchline"></p>
+
+    <script>
+        document.getElementById("ladeWitz").addEventListener("click", async () => {
+            const setupElement = document.getElementById("setup");
+            const punchlineElement = document.getElementById("punchline");
+
+            setupElement.textContent = "Lade Witz...";
+            punchlineElement.textContent = "";
+
+            const response = await fetch("https://official-joke-api.appspot.com/random_joke");
+            const data = await response.json();
+            
+            setupElement.textContent = data.setup;
+            punchlineElement.textContent = data.punchline;
+        });
+    </script>
+</body>
+</html>

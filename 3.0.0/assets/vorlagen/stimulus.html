@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stimulus-Vorlage</title>
+    <style>.d-none { display: none; }</style>
+</head>
+<body>
+
+<div data-controller="StimulusVorlage">
+    <form data-action="submit->StimulusVorlage#tabelleAusgeben" method="POST" class="grid">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" data-StimulusVorlage-target="StimulusVorlageFormularName">
+
+        <label for="alter">Alter</label>
+        <input type="number" id="alter" name="alter" data-StimulusVorlage-target="StimulusVorlageFormularAlter">
+
+        <label for="statusAuswahl">Aktueller Status</label>
+        <select name="statusAuswahl" id="statusAuswahl" data-StimulusVorlage-target="StimulusVorlageFormularStatus" data-action="change->StimulusVorlage#statusDetails">
+            <option value="Arbeiten">Arbeiten</option>
+            <option value="Ausbildung">Ausbildung</option>
+            <option value="Studieren">Studieren</option>
+            <option value="Sonstiges">Sonstiges</option>
+        </select>
+
+        <input type="text" placeholder="Was machst du stattdessen?" name="EingabeStattdessen" id="EingabeStattdessen" class="d-none" data-StimulusVorlage-target="StimulusVorlageFormularStatusStattdessen">
+
+    <button type="submit">Speichern</button>
+    </form>
+
+    <table class="d-none" data-StimulusVorlage-target="StimulusVorlageTabelle" id="StimulusVorlageTabelle">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Alter</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-StimulusVorlage-target="StimulusVorlageTabelleName"></td>
+                <td data-StimulusVorlage-target="StimulusVorlageTabelleAlter"></td>
+                <td data-StimulusVorlage-target="StimulusVorlageTabelleAuswahl"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script type="module">
+  import { Application } from "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js"
+  const application = Application.start()
+
+  import StimulusVorlageController from "./stimulusVorlage_controller.js"
+  application.register("StimulusVorlage", StimulusVorlageController)
+</script>
+    
+</body>
+</html>

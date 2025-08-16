@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objekte & JSON</title>
+</head>
+<body>
+
+<!--
+Erstelle ein Objekt buch mit den Eigenschaften: titel, autor und jahr.
+Gib das Objekt als JSON-String im Browser aus.    
+-->
+
+<div id="buchPraesentation"></div>
+
+<script>
+    buch = {
+        "titel": "Der Herr der Ringe - Die Gefährten",
+        "autor": "J.R.R. Tolkien",
+        "jahr": 2012
+    }
+
+    // Als JSON-String ausgeben
+    const buchJSON = JSON.stringify(buch, null, 2);
+
+    // Daten einzeln auslesen
+    const buchPraesentation = document.getElementById("buchPraesentation");
+    buchPraesentation.innerHTML = `
+    <pre>${buchJSON}</pre><br><hr><br>
+    <dl>
+        <p><span class="key">Titel:</span> <span class="value">${buch['titel']}</span></p>
+        <p><span class="key">Autor:</span> <span class="value">${buch['autor']}</span></p>
+        <p><span class="key">Jahr:</span> <span class="value">${buch['jahr']}</span></p>
+    </dl>
+    `;
+</script>
+
+<style>
+    .key {
+        font-weight: 700;;
+    }
+
+    .value {
+        float: right;
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+</style>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+.unoCard {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 128px;
+    height: 128px;
+    color: white;
+    margin: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+  
+.unoCardRot { 
+    background: red;
+}
+
+.unoCardBlau {
+    background: blue;
+}
+
+.unoCardGruen {
+    background: green;
+}
+
+.unoCardGelb {
+    background: goldenrod;
+}
+
+.unoCardSchwarz {
+    background: black;
+}

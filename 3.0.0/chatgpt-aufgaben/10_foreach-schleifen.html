@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach-Schleife üben</title>
+    <style>
+        body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px;}
+        th {padding-bottom: 20px !important; text-align: left !important; font-weight: lighter;}
+        button { background: green; border: 1px solid #ccc; border-radius: 5px; color: #fff; padding: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div style="margin-bottom: 20px; display: grid;">
+    <button id="fuellenButton">Tabelle füllen</button>
+</div>
+
+<table style="width: 100%;" id="lernTabelle">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Vorname</th>
+            <th>Nachname</th>
+            <th>Alter</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Einträge werden per JavaScript eingefügt -->
+    </tbody>
+</table>
+
+<script>
+    const details = [
+        {
+            "id":1,
+            "vorname": "Sven",
+            "nachname": "Berger",
+            "alter": 34
+        },
+        {
+            "id": 2,
+            "vorname": "Hans",
+            "nachname": "Peter",
+            "alter": 50
+        }
+    ];
+
+    document.getElementById("fuellenButton").addEventListener("click", function() {
+        const tbody = document.querySelector("#lernTabelle tbody");
+        tbody.innerHTML = ""; // Vorherige Einträge löschen
+
+        details.forEach(function(person) {
+            const row = `
+                <tr>
+                    <td>${person.id}</td>
+                    <td>${person.vorname}</td>
+                    <td>${person.nachname}</td>
+                    <td>${person.alter}</td>
+                </tr>
+            `;
+            tbody.innerHTML += row;
+        });
+    });
+</script>
+
+</body>
+</html>

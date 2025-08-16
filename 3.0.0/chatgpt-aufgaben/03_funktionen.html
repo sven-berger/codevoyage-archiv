@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funktionen</title>
+</head>
+<body>
+
+<div id="begruesse"></div>
+
+<script>
+    let name1 = "Sven";
+    let name2 = "Loveday";
+    let name3 = "HansPeter"
+
+    function begruesse(name) {
+        const begruesse = document.getElementById("begruesse");
+        begruesse.innerHTML += `Hallo ${name}!<br><br>`;
+    }
+
+    begruesse(name1);
+    begruesse(name2);
+    begruesse(name3);
+</script>
+
+
+</body>
+</html>

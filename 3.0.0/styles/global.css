@@ -1,0 +1,17 @@
+@media (min-width: 992px) {
+    .col-md-9 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .col-md-3 {
+        padding-left: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-9, .col-md-3 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Array-Methoden</title>
+</head>
+<body>
+<!--
+    Erstelle ein Array mit 5 Zahlen.
+Verwende .map(), um ein neues Array zu erstellen, in dem alle Zahlen verdoppelt sind.
+Zeige beide Arrays im Browser oder in der Konsole.
+-->
+
+<ul id="ausgabe"></ul>
+
+<ul id="zahlenDoppeltAusgabe"></ul>
+
+<script>
+    let zahlen = [
+        1, 1, 2, 3, 5
+    ];
+
+    const ausgabe = document.getElementById("ausgabe");
+    const zahlenDoppeltAusgabe = document.getElementById("zahlenDoppeltAusgabe");
+
+    for (zahl of zahlen) {
+        ausgabe.innerHTML += `<li>${zahl}</li>`;
+    }
+
+    const zahlenDoppelt = zahlen.map(function(zahl) {
+        return zahl * 2;
+    });
+
+    zahlenDoppelt.forEach(function(zahl) {
+        zahlenDoppeltAusgabe.innerHTML += `<li>${zahl}</li>`;
+    });
+</script>
+</body>
+</html>
