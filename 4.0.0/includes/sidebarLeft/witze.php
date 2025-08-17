@@ -11,4 +11,4 @@
 
 <div id="witzAusgabe" class="p-0 mt-3"></div>
 
-<script src="/3.0.0/includes/sidebarLeft/js/witze.js"></script>
+<script src="/4.0.0/includes/sidebarLeft/js/witze.js"></script>

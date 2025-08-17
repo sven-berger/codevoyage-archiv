@@ -1,6 +1,6 @@
 <?php 
   $pageTitle = "Adventskalender";
-  require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/header.php");
+  require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/header.php");
 ?>
 
 <div id="adventskalender" class="p-2 bg-success rounded">
@@ -10,4 +10,4 @@
     </div>
 </div>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/footer.php"); ?>

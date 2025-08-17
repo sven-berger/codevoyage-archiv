@@ -1,6 +1,6 @@
 <?php 
   $pageTitle = "Mini-Taschenrechner";
-  require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/header.php");
+  require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/header.php");
 ?>
 
 <script src="/js/mini-taschenrechner.js" defer></script>
@@ -38,4 +38,4 @@
 
 <div id="ergebnisAusgabe"></div>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/footer.php"); ?>

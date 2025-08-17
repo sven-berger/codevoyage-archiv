@@ -1,6 +1,6 @@
 <?php 
   $pageTitle = "Blog-Artikel";
-  require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/header.php");
+  require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/header.php");
 ?>
 
 <?php
@@ -42,4 +42,4 @@ foreach ($eintraege as $eintrag) {
     <div class="alert alert-danger">Der Artikel konnte nicht gefunden werden.</div>
 <?php endif; ?>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/footer.php"); ?>

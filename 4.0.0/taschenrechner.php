@@ -1,6 +1,6 @@
 <?php 
   $pageTitle = "Taschenrechner";
-  require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/header.php");
+  require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/header.php");
 ?>
 
 <div data-controller="Taschenrechner" class="taschenrechner border rounded">
@@ -41,4 +41,4 @@
     }
 </style>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/footer.php"); ?>

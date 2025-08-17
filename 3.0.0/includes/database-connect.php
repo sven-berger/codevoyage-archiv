@@ -1,11 +1,11 @@
 <?php
 
 class Database {
-    private static $host = 'i3px.your-database.de';
+    private static $host = 'j3us.your-database.de';
     private static $port = '3306';
     private static $database = 'codevoyage';
     private static $username = 'codevoyage';
-    private static $password = 'wAaxgczWBhZzy3CA';
+    private static $password = 'ta86E8eFhWJYk254';
     private static $connection = null;
 
     public static function connect() {

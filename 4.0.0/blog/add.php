@@ -2,7 +2,7 @@
   error_reporting(E_ALL);
   ini_set('display_errors', 1);
   $pageTitle = "Blog-Artikel erstellen";
-  require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/header.php");
+  require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/header.php");
 ?>
 
 <!-- blog-erstellen.php -->
@@ -80,4 +80,4 @@
         }
     }
 ?>
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/footer.php"); ?>

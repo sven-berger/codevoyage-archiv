@@ -1,6 +1,6 @@
 <?php 
   $pageTitle = "Inhalt ausgeben";
-  require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/header.php");
+  require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/header.php");
 ?>
 
 <script src="/js/inhalt-ausgeben.js"></script>
@@ -68,4 +68,4 @@
 
 <div id="ausgabeInhalt"></div>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/footer.php"); ?>

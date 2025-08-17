@@ -39,7 +39,7 @@ function getWeather() {
 
         wetterAusgabe.innerHTML = `
           <div class="card border-0">
-            <img src="/3.0.0/images/weather/${bild}" alt="Wetter">
+            <img src="/4.0.0/images/weather/${bild}" alt="Wetter">
             <div class="card-body ps-0" >
               <h5 class="card-title" style="">${temperatur}°C</h5>
               <p class="card-text">Zeitzone:</span> ${zeitZone}</p>

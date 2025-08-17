@@ -1,4 +1,4 @@
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/header.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/header.php"); ?>
 
 <?php
     // Standardseite setzen
@@ -17,8 +17,8 @@
     if (file_exists($filePath)) {
         include $filePath;
     } else {
-        require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/lib/errors/404.php");
+        require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/lib/errors/404.php");
     }
 ?>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/footer.php"); ?>

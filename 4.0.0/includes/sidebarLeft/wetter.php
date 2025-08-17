@@ -1,3 +1,3 @@
 <div id="wetterAusgabe"></div>
 
-<script src="/3.0.0/includes/sidebarLeft/js/wetter.js"></script>
+<script src="/4.0.0/includes/sidebarLeft/js/wetter.js"></script>

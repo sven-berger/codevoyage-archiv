@@ -23,10 +23,10 @@ $name = htmlspecialchars($_POST['name']);
 $alter = $_POST['alter'];
 $auto = htmlspecialchars($_POST['auto']);
 
-$person = new Person("$name", $alter);
+$person = new Person($name, $alter);
 echo $person->vorstellen();
 
-$auto = new Auto("$auto", $person);
+$auto = new Auto($auto, $person);
 echo $auto->beschreibung();
 
 }

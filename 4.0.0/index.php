@@ -1,6 +1,6 @@
 <?php 
   $pageTitle = "Stimulus erlernen";
-  require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/header.php");
+  require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/header.php");
 ?>
 
 <div data-controller="StimulusLernen">
@@ -12,4 +12,4 @@
   <div data-StimulusLernen-target="ausgabe" class="border p-3 border rounded fw-light mt-3"></div>
 </div>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/footer.php"); ?>

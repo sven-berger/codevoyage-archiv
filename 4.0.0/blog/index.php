@@ -1,6 +1,6 @@
 <?php 
   $pageTitle = "Mein Blog";
-  require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/header.php");
+  require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/header.php");
 ?>
 
 <div id="blog"></div>
@@ -39,4 +39,4 @@ function blogEintraegeAnzeigen(eintraege) {
   });
 }
 </script>
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/footer.php"); ?>

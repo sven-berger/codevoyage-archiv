@@ -1,6 +1,6 @@
 <?php 
   $pageTitle = "Blog-Artikel bearbeiten";
-  require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/header.php");
+  require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/header.php");
 ?>
 
 <?php
@@ -58,4 +58,4 @@ if (!isset($aktuellerArtikel)) die("Artikel nicht gefunden.");
   </div>
 </form>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/footer.php"); ?>

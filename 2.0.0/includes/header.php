@@ -1,4 +1,4 @@
-<?php if (ob_get_level() == 0) ob_start(); require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/includes/session.php"); ?>
+<?php if (ob_get_level() == 0) ob_start(); require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/session.php"); ?>
 <!DOCTYPE html>  
 <html lang="de">  
 <head>  
@@ -15,13 +15,13 @@
     <script>hljs.highlightAll();</script>
 
     <!-- Angelegte Stylesheets einbinden -->
-    <link rel="stylesheet "href="styles/editor.css">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet "href="https://codevoyage.samwilliam.de/2.0.0/styles/editor.css">
+    <link rel="stylesheet" href="https://codevoyage.samwilliam.de/2.0.0/styles/styles.css">
+    <link rel="stylesheet" href="https://codevoyage.samwilliam.de/2.0.0/styles/mobile.css">
 </head>
 
 <body>
     <div class="container">
-        <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/includes/seitenleiste.php"); ?>
+        <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/seitenleiste.php"); ?>
         <div class="main-content">
-        <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/includes/navigation.php"); ?>
+        <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/navigation.php"); ?>

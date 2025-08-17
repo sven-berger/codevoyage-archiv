@@ -10,20 +10,20 @@ ob_start();
 <title><?php if ($pageTitle == ''): ?>JavaScript | samwilliam<?php else: ?><?= $pageTitle; ?><?php endif; ?></title>
 
 <!-- Font Awesome 6 Free einbinden -->
-<link rel="stylesheet" href="https://codevoyage.samwilliam.de/3.0.0/assets/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="https://codevoyage.samwilliam.de/4.0.0/assets/fontawesome/css/all.min.css">
 
 <!-- Bootstrap einbinden -->
-<link href="https://codevoyage.samwilliam.de/3.0.0/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://codevoyage.samwilliam.de/4.0.0/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Eigene CSS -->
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/css.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/css.php"); ?>
 
 <!-- Google Fonts: Roboto -->
 <style>
 /* Für die normale Schriftbreite */
 @font-face {
   font-family: 'Roboto';
-  src: url('https://codevoyage.samwilliam.de/3.0.0/assets/fonts/roboto/Roboto-Regular.ttf') format('ttf');
+  src: url('https://codevoyage.samwilliam.de/4.0.0/assets/fonts/roboto/Roboto-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }
@@ -31,7 +31,7 @@ ob_start();
 /* Für die dickere Schriftbreite */
 @font-face {
   font-family: 'Roboto';
-  src: url('https://codevoyage.samwilliam.de/3.0.0/assets/fonts/roboto/Roboto-Bold.ttf') format('ttf');
+  src: url('https://codevoyage.samwilliam.de/4.0.0/assets/fonts/roboto/Roboto-Bold.ttf') format('ttf');
   font-weight: 700;
     font-style: normal;
 }
@@ -44,7 +44,7 @@ ob_start();
 <body class="bg-primary-subtle p-0 m-0 d-flex flex-column vh-100 fs-6" style="font-family: 'Roboto', sans-serif;">
 
 <!-- Navigation -->
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/nav.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/nav.php"); ?>
 
 <!-- Beginn des Inhaltes -->
 <div class="container">
@@ -52,7 +52,7 @@ ob_start();
 
 <!-- Linke Seitenleiste -->
 <div class="col-md-3">
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/sidebarLeft.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/sidebarLeft.php"); ?>
 </div>
   
 <!-- Hauptinhalt -->
