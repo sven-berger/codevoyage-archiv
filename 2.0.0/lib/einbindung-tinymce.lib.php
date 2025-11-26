@@ -1,5 +1,5 @@
 <?php
-    require_once("../1.0.0//lib/forms/einbindung-tinymce.form.php");
+    require_once("../2.0.0//lib/forms/einbindung-tinymce.form.php");
 ?>
 
 <pre class="language-html"><code>&lt;!-- TinyMCE-Editor einbinden --&gt;

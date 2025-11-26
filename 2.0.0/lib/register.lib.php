@@ -1,6 +1,6 @@
 <?php
-    require_once("../1.0.0/lib/class/register.class.php");
-    require_once("../1.0.0/lib/forms/register.form.php");
+    require_once("../2.0.0/lib/class/register.class.php");
+    require_once("../2.0.0/lib/forms/register.form.php");
 
     if (!empty($_POST['benutzername']) && !empty($_POST['vorname']) && !empty($_POST['passwort']) && !empty($_POST['passwort-wdh'])){
         $benutzername = trim($_POST['benutzername']);

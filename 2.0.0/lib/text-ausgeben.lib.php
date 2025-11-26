@@ -1,5 +1,5 @@
 <?php
-    require_once("../1.0.0/lib/forms/text-ausgeben.form.php");    
+    require_once("../2.0.0/lib/forms/text-ausgeben.form.php");    
 ?>
 
     <?php if (isset($_POST['string']) && isset($_POST['ausgaben'])): ?>

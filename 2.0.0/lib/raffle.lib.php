@@ -1,6 +1,6 @@
 <?php
-    require_once "$_SERVER[DOCUMENT_ROOT]" . "/1.0.0/lib/class/raffle.class.php";
-    require_once "$_SERVER[DOCUMENT_ROOT]" . "/1.0.0/lib/forms/raffle.form.php";
+    require_once "$_SERVER[DOCUMENT_ROOT]" . "/2.0.0/lib/class/raffle.class.php";
+    require_once "$_SERVER[DOCUMENT_ROOT]" . "/2.0.0/lib/forms/raffle.form.php";
 
     if (isset($_POST['gewinnerzahl'])) {
         $eingabe = (int)$_POST['gewinnerzahl'];

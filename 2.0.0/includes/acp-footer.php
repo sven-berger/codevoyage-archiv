@@ -18,7 +18,7 @@ if (isset($_GET['page'])) {
     <div class="page-function">
         <ul>
             <li>
-                <button><a href="https://samwilliam.de/1.0.0/acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite bearbeiten</a></button>
+                <button><a href="https://samwilliam.de/2.0.0/acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite bearbeiten</a></button>
             </li>
         </ul>
     </div>

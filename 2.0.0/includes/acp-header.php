@@ -1,4 +1,4 @@
-<?php if (ob_get_level() == 0) ob_start(); require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/includes/session.php"); ?>
+<?php if (ob_get_level() == 0) ob_start(); require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/session.php"); ?>
 <!DOCTYPE html>  
 <html lang="de">  
 <head>  
@@ -16,12 +16,12 @@
 
     <!-- Angelegte Stylesheets einbinden -->
     <link rel="stylesheet "href="https://codevoyage.samwilliam.de/3.0.0/assets/tinymce/langs/de.js">
-    <link rel="stylesheet" href="https://codevoyage.samwilliam.de/1.0.0/styles/styles.css">
+    <link rel="stylesheet" href="https://codevoyage.samwilliam.de/2.0.0/styles/styles.css">
 </head>
 
 <body>
 <div class="container">
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/includes/acp-seitenleiste.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/acp-seitenleiste.php"); ?>
 
 <div class="main-content">
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/includes/navigation.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/navigation.php"); ?>

@@ -1,9 +1,9 @@
 <?php
-    require_once("../1.0.0/lib/class/zahlen-raten.class.php");    
+    require_once("../2.0.0/lib/class/zahlen-raten.class.php");    
     $zahlenRaten = new ZahlenRaten();
 
     if (!isset($_POST['zahl'])) {
-        include("../1.0.0/lib/forms/zahlen-raten.form.php");
+        include("../2.0.0/lib/forms/zahlen-raten.form.php");
     }
 
     if (!isset($_SESSION['zufallszahl'])) {

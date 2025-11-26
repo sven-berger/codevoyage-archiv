@@ -18,7 +18,7 @@ if (isset($_GET['page'])) {
     <div class="page-function">
         <ul>
             <li>
-                <button><a href="../1.0.0/acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite bearbeiten</a></button>
+                <button><a href="../2.0.0/acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite bearbeiten</a></button>
             </li>
         </ul>
     </div>
@@ -29,7 +29,7 @@ if (isset($_GET['page'])) {
 
 <?php if ($gelistetAufGitHub): ?>
     <?php 
-        $gitHubMain = "https://github.com/sven-berger/codevoyage/blob/main/1.0.0/lib";
+        $gitHubMain = "https://github.com/sven-berger/codevoyage/blob/main/2.0.0/lib";
         $gitHubLinks = [
             "Bibliothek" => "<a href='{$gitHubMain}/{$page}.lib.php' target='_blank'>{$page}.lib.php</a>",
             "Klasse" => "<a href='{$gitHubMain}/class/{$page}.class.php' target='_blank'>{$page}.class.php</a>",
