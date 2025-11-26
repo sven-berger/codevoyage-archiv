@@ -1,16 +1,16 @@
 <div class="sidebar">
     <h3>Eigene Werke</h3>
     <ul>
-        <li><a href="../2.0.0/index.php?page=zahlen-raten">Zahlen raten</a></li>
-        <li><a href="../2.0.0/index.php?page=mini-taschenrechner">Mini-Taschenrechner</a></li>
-        <li><a href="../2.0.0/index.php?page=raffle">Mini-Gewinnspiel</a></li>
-        <li><a href="../2.0.0/index.php?page=bankaccounts">Bankkonten</a></li>
-        <li><a href="../2.0.0/index.php?page=ortsliste">Ortsliste</a></li>
+        <li><a href="/2.0.0/index.php?page=zahlen-raten">Zahlen raten</a></li>
+        <li><a href="/2.0.0/index.php?page=mini-taschenrechner">Mini-Taschenrechner</a></li>
+        <li><a href="/2.0.0/index.php?page=raffle">Mini-Gewinnspiel</a></li>
+        <li><a href="/2.0.0/index.php?page=bankaccounts">Bankkonten</a></li>
+        <li><a href="/2.0.0/index.php?page=ortsliste">Ortsliste</a></li>
     </ul>
     <h3>Spielerein</h3>
     <ul>
-        <li><a href="../2.0.0/index.php?page=text-ausgeben">Text ausgeben (In einer Schleife)</a></li>
-        <li><a href="../2.0.0/index.php?page=zahlen-ausgeben">Zahlen ausgeben (In einer Schleife)</a></li>
+        <li><a href="/2.0.0/index.php?page=text-ausgeben">Text ausgeben (In einer Schleife)</a></li>
+        <li><a href="/2.0.0/index.php?page=zahlen-ausgeben">Zahlen ausgeben (In einer Schleife)</a></li>
     </ul>
     <h3>Sonstiges</h3>
     <ul>
