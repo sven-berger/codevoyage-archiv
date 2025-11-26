@@ -1,9 +1,9 @@
 <?php
-$host = 'mysqlserver'; // <-- wichtig: das ist der Name deines MySQL-Services im Docker-Netz
+$host = 'localhost'; // <-- wichtig: das ist der Name deines MySQL-Services im Docker-Netz
 $port = 3306;
-$dbname = 'server_db';
-$username = 'dev';
-$password = 'devpass';
+$dbname = 'codevoyage';
+$username = 'sven';
+$password = 'DieS?ms22';
 
 $dsn = "mysql:host=$host;port=$port;dbname=$dbname;";
 

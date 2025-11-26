@@ -1,4 +1,6 @@
-<?php ob_start(); session_start(); require_once ($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/database-connect.php");
+<?php ob_start();
+session_start();
+require_once($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/database-connect.php");
 
 // Falls der Benutzer bereits eingeloggt ist, nichts tun
 if (isset($_SESSION['benutzername'])) {
