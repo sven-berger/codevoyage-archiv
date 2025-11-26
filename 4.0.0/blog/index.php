@@ -1,31 +1,30 @@
-<?php 
-  $pageTitle = "Mein Blog";
-  require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/header.php");
+<?php
+$pageTitle = "Mein Blog";
+require_once($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/header.php");
 ?>
 
 <div id="blog"></div>
 
 <script>
-fetch('../json/blog.json')
-  .then(response => response.json()) // JSON parsen
-  .then(data => {
-    console.log(data); // Zum Testen in der Konsole
-    blogEintraegeAnzeigen(data); // Übergib die Daten an eine Funktion
-  })
-  .catch(error => {
-    console.error('Fehler beim Laden der JSON:', error);
-  });
+  fetch('../json/blog.json')
+    .then(response => response.json()) // JSON parsen
+    .then(data => {
+      blogEintraegeAnzeigen(data); // Übergib die Daten an eine Funktion
+    })
+    .catch(error => {
+      console.error('Fehler beim Laden der JSON:', error);
+    });
 
-function blogEintraegeAnzeigen(eintraege) {
-  const container = document.getElementById("blog");
+  function blogEintraegeAnzeigen(eintraege) {
+    const container = document.getElementById("blog");
 
-  eintraege.sort((a, b) => b.id - a.id);
+    eintraege.sort((a, b) => b.id - a.id);
 
-  eintraege.forEach((eintrag, index) => {
-    const div = document.createElement("div");
-    div.classList.add("card", "bg-light", "mb-4",);
+    eintraege.forEach((eintrag, index) => {
+      const div = document.createElement("div");
+      div.classList.add("card", "bg-light", "mb-4", );
 
-    div.innerHTML = `
+      div.innerHTML = `
       <div class="card-body">
         <h3 class="card-title">${eintrag.titel}</h3>
         <p class="card-subtitle mb-2 text-muted"><strong>Kategorie:</strong> ${eintrag.kategorie}</p>
@@ -35,8 +34,8 @@ function blogEintraegeAnzeigen(eintraege) {
       </div>
     `;
 
-    container.appendChild(div);
-  });
-}
+      container.appendChild(div);
+    });
+  }
 </script>
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/footer.php"); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/includes/footer.php"); ?>
