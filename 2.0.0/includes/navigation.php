@@ -5,8 +5,11 @@
             <li class="now-tag"><?= Now::tag(); ?></li>
             <li class="now-datum"><?= Now::datum(); ?></li>
             <li class="now-uhrzeit"><?= Now::uhrzeit(); ?> Uhr</li>
-            <!-- <li class="now-benutzer"><?php // $user['benutzername'] 
-                                            ?></li> -->
+            <?php if (!empty($benutzername)): ?>
+                <li class="now-benutzer">Hallo <?php echo htmlspecialchars($benutzername); ?></li>
+            <?php else: ?>
+                <li class="now-benutzer">Hallo Gast, schön das du da bist.</li>
+            <?php endif; ?>
         </ul>
     </div>
     <div class="menu">
