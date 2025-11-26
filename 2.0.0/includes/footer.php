@@ -15,33 +15,33 @@ if (isset($_GET['page'])) {
 <?php if (!empty($row)): ?>
     <?php $gelistetAufGitHub = false; ?>
     <?php if (isset($_SESSION['benutzername'])): ?>
-    <div class="page-function">
-        <ul>
-            <li>
-                <button><a href="../2.0.0/acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite bearbeiten</a></button>
-            </li>
-        </ul>
-    </div>
-    <?php endif ;?>
+        <div class="page-function">
+            <ul>
+                <li>
+                    <button><a href="../2.0.0/acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite bearbeiten</a></button>
+                </li>
+            </ul>
+        </div>
+    <?php endif; ?>
 <?php else: ?>
     <?php $gelistetAufGitHub = true; ?>
 <?php endif; ?>
 
 <?php if ($gelistetAufGitHub): ?>
-    <?php 
-        $gitHubMain = "https://github.com/sven-berger/codevoyage/blob/main/2.0.0/lib";
-        $gitHubLinks = [
-            "Bibliothek" => "<a href='{$gitHubMain}/{$page}.lib.php' target='_blank'>{$page}.lib.php</a>",
-            "Klasse" => "<a href='{$gitHubMain}/class/{$page}.class.php' target='_blank'>{$page}.class.php</a>",
-            "Formular" => "<a href='{$gitHubMain}/forms/{$page}.form.php' target='_blank'>{$page}.form.php</a>",
-        ];
+    <?php
+    $gitHubMain = "https://github.com/sven-berger/codevoyage/blob/main/2.0.0/lib";
+    $gitHubLinks = [
+        "Bibliothek" => "<a href='{$gitHubMain}/{$page}.lib.php' target='_blank'>{$page}.lib.php</a>",
+        "Klasse" => "<a href='{$gitHubMain}/class/{$page}.class.php' target='_blank'>{$page}.class.php</a>",
+        "Formular" => "<a href='{$gitHubMain}/forms/{$page}.form.php' target='_blank'>{$page}.form.php</a>",
+    ];
     ?>
     <div class="gelistetAufGitHub">
         <h4 class="sectionHeader">Dateien auf GitHub</h4>
         <ul class="gitHub">
             <?php foreach ($gitHubLinks as $key => $value): ?>
-            <li><span class='gitHub-Key'><?= $key; ?></span>: <span class='gitHub-Value'><?= $value; ?></span></li>
-            <?php endforeach; ?>  
+                <li><span class='gitHub-Key'><?= $key; ?></span>: <span class='gitHub-Value'><?= $value; ?></span></li>
+            <?php endforeach; ?>
         </ul>
     </div>
 <?php endif; ?>
@@ -49,24 +49,24 @@ if (isset($_GET['page'])) {
 </div>
 
 <!-- TinyMCE-Editor einbinden -->
-<script src="https://codevoyage.samwilliam.de/3.0.0/assets/tinymce/tinymce.min.js"></script>
+<script src="/3.0.0/assets/tinymce/tinymce.min.js"></script>
 <script>
-tinymce.init({
-    selector: 'textarea',
-    license_key: 'gpl',
-    content_css:
-    [
-        'https://codevoyage.samwilliam.de/3.0.0/assets/highlightjs/styles/default.min.css',
-        'https://codevoyage.samwilliam.de/2.0.0/styles/tm-editor.css'
-    ],
-    menubar: false,
-    language: 'de',
-    language_url: 'https://codevoyage.samwilliam.de/3.0.0/assets/tinymce/langs/de.js',
-    plugins: 'code table lists fullscreen wordcount link image autosave advlist codesample preview',
-    toolbar: 'code undo redo | bold italic | blocks | link image codesample table blockquote | bullist numlist | alignleft aligncenter alignright removeformat preview',
-    fontsize_formats: "10pt 12pt 14pt 16pt 18pt 24pt 36pt"
-});
+    tinymce.init({
+        selector: 'textarea',
+        license_key: 'gpl',
+        content_css: [
+            '/3.0.0/assets/highlightjs/styles/default.min.css',
+            '/2.0.0/styles/tm-editor.css'
+        ],
+        menubar: false,
+        language: 'de',
+        language_url: '/3.0.0/assets/tinymce/langs/de.js',
+        plugins: 'code table lists fullscreen wordcount link image autosave advlist codesample preview',
+        toolbar: 'code undo redo | bold italic | blocks | link image codesample table blockquote | bullist numlist | alignleft aligncenter alignright removeformat preview',
+        fontsize_formats: "10pt 12pt 14pt 16pt 18pt 24pt 36pt"
+    });
 </script>
 
 </body>
+
 </html>

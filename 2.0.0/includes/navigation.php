@@ -5,15 +5,13 @@
             <li class="now-tag"><?= Now::tag(); ?></li>
             <li class="now-datum"><?= Now::datum(); ?></li>
             <li class="now-uhrzeit"><?= Now::uhrzeit(); ?> Uhr</li>
-            <li class="now-benutzer"><?= $now->benutzer(); ?></li>
         </ul>
     </div>
     <div class="menu">
         <ul class="navbar">
-            <li><a href="../2.0.0/index.php?page=index">Startseite</a></li></li>
             <li><a href="../2.0.0/index.php?page=about">Über mich</a></li>
             <li><a href="../2.0.0/index.php?page=kontakt">Kontakt</a></li>
-            <li><a href="../2.0.0/index.php?page=impressum">Impressum</a></li> 
+            <li><a href="../2.0.0/index.php?page=impressum">Impressum</a></li>
             <li><a href="../2.0.0/index.php?page=datenschutzerklaerung">Datenschutzerklärung</a></li>
         </ul>
     </div>
