@@ -11,12 +11,12 @@ ini_set('display_startup_errors', 1);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://codevoyage.riftcore.de/1.0.0/python/static/css/style.css">
-    <link rel="stylesheet" href="https://codevoyage.riftcore.de/4.0.0/assets/highlightjs/styles/default.min.css">
-    <script src="https://codevoyage.riftcore.de/4.0.0/assets/highlightjs/highlight.min.js"></script>
+    <link rel="stylesheet" href="/4.0.0/assets/highlightjs/styles/default.min.css">
+    <script src="/4.0.0/assets/highlightjs/highlight.min.js"></script>
     <script>
     hljs.highlightAll();
     </script>
-    <link rel="stylesheet" href="https://codevoyage.riftcore.de/4.0.0/assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/4.0.0/assets/fontawesome/css/all.min.css">
     <title><?php echo $pageTitle; ?></title>
 </head>
 <?php

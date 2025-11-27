@@ -13,22 +13,24 @@ if (isset($_GET['page'])) {
 ?>
 
 <?php if (!empty($row)): ?>
-    <?php $gelistetAufGitHub = false; ?>
-    <?php if (isset($_SESSION['benutzername'])): ?>
-        <div class="page-function">
-            <ul>
-                <li>
-                    <button><a href="../2.0.0/acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite bearbeiten</a></button>
-                </li>
-            </ul>
-        </div>
-    <?php endif; ?>
+<?php $gelistetAufGitHub = false; ?>
+<?php if (isset($_SESSION['benutzername'])): ?>
+<div class="page-function">
+    <ul>
+        <li>
+            <button><a
+                    href="../2.0.0/acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite
+                    bearbeiten</a></button>
+        </li>
+    </ul>
+</div>
+<?php endif; ?>
 <?php else: ?>
-    <?php $gelistetAufGitHub = true; ?>
+<?php $gelistetAufGitHub = true; ?>
 <?php endif; ?>
 
 <?php if ($gelistetAufGitHub): ?>
-    <?php
+<?php
     $gitHubMain = "https://github.com/sven-berger/codevoyage/blob/main/2.0.0/lib";
     $gitHubLinks = [
         "Bibliothek" => "<a href='{$gitHubMain}/{$page}.lib.php' target='_blank'>{$page}.lib.php</a>",
@@ -36,14 +38,14 @@ if (isset($_GET['page'])) {
         "Formular" => "<a href='{$gitHubMain}/forms/{$page}.form.php' target='_blank'>{$page}.form.php</a>",
     ];
     ?>
-    <div class="gelistetAufGitHub">
-        <h4 class="sectionHeader">Dateien auf GitHub</h4>
-        <ul class="gitHub">
-            <?php foreach ($gitHubLinks as $key => $value): ?>
-                <li><span class='gitHub-Key'><?= $key; ?></span>: <span class='gitHub-Value'><?= $value; ?></span></li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
+<div class="gelistetAufGitHub">
+    <h4 class="sectionHeader">Dateien auf GitHub</h4>
+    <ul class="gitHub">
+        <?php foreach ($gitHubLinks as $key => $value): ?>
+        <li><span class='gitHub-Key'><?= $key; ?></span>: <span class='gitHub-Value'><?= $value; ?></span></li>
+        <?php endforeach; ?>
+    </ul>
+</div>
 <?php endif; ?>
 </div>
 </div>
@@ -51,20 +53,20 @@ if (isset($_GET['page'])) {
 <!-- TinyMCE-Editor einbinden -->
 <script src="/3.0.0/assets/tinymce/tinymce.min.js"></script>
 <script>
-    tinymce.init({
-        selector: 'textarea',
-        license_key: 'gpl',
-        content_css: [
-            '/3.0.0/assets/highlightjs/styles/default.min.css',
-            '/2.0.0/styles/tm-editor.css'
-        ],
-        menubar: false,
-        language: 'de',
-        language_url: '/3.0.0/assets/tinymce/langs/de.js',
-        plugins: 'code table lists fullscreen wordcount link image autosave advlist codesample preview',
-        toolbar: 'code undo redo | bold italic | blocks | link image codesample table blockquote | bullist numlist | alignleft aligncenter alignright removeformat preview',
-        fontsize_formats: "10pt 12pt 14pt 16pt 18pt 24pt 36pt"
-    });
+tinymce.init({
+    selector: 'textarea',
+    license_key: 'gpl',
+    content_css: [
+        '/4.0.0/assets/highlightjs/styles/default.min.css',
+        '/2.0.0/styles/tm-editor.css'
+    ],
+    menubar: false,
+    language: 'de',
+    language_url: '/4.0.0/assets/tinymce/langs/de.js',
+    plugins: 'code table lists fullscreen wordcount link image autosave advlist codesample preview',
+    toolbar: 'code undo redo | bold italic | blocks | link image codesample table blockquote | bullist numlist | alignleft aligncenter alignright removeformat preview',
+    fontsize_formats: "10pt 12pt 14pt 16pt 18pt 24pt 36pt"
+});
 </script>
 
 </body>

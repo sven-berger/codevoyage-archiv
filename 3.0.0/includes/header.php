@@ -13,17 +13,18 @@ ini_set('display_startup_errors', 1);
     <title>samwilliam.de</title>
 
     <!-- Font Awesome 6 Free einbinden -->
-    <link rel="stylesheet" href="/3.0.0/assets/fontawesome/css/all.min.css">
-
-    <!-- Bootstrap einbinden -->
-    <link href="/3.0.0/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/4.0.0/assets/fontawesome/css/all.min.css">
 
     <!-- HightLight.js einbinden -->
-    <link rel="stylesheet" href="/3.0.0/assets/highlightjs/styles/default.min.css">
-    <script src="/3.0.0/assets/highlightjs/highlight.min.js"></script>
+    <link rel="stylesheet" href="/4.0.0/assets/highlightjs/styles/default.min.css">
     <script>
-        hljs.highlightAll();
+    hljs.highlightAll();
     </script>
+
+    <!-- Angelegte Stylesheets einbinden -->
+    <link rel="stylesheet " href="/2.0.0/styles/editor.css">
+    <link rel="stylesheet" href="/2.0.0/styles/styles.css">
+    <link rel="stylesheet" href="/2.0.0/styles/mobile.css">
 
     <!-- Angelegte Stylesheets einbinden -->
     <?php require_once($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/includes/css.php"); ?>
