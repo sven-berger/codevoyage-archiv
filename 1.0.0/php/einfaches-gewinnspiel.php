@@ -1,7 +1,7 @@
 <?php
     $bereich = 'PHP-Bereich';
     $pageTitle = "Einfaches Gewinnspiel";
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/header/instance.header.inc.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/header/instance.header.inc.php");
 ?>
 
 <?php echo $section_beginn; ?>
@@ -35,5 +35,5 @@
 <?php endif; ?>
 
 <?php
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/footer/php.footer.inc.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/footer/php.footer.inc.php");
 ?>

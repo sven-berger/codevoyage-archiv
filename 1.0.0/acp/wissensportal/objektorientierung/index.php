@@ -16,10 +16,10 @@
     <tbody>
             <?php foreach ($oop_snippets as $snippet): ?>
             <tr>
-                <td><a href="<?php echo 'https://codevoyage.samwilliam.de/1.0.0/wissensportal//objektorientierung/index.php?snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
+                <td><a href="<?php echo '/1.0.0/wissensportal//objektorientierung/index.php?snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
                 <td>
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/objektorientierung/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a> |
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/objektorientierung/delete.php?id=<?php echo $snippet['id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
+                    <a href="/1.0.0/acp/wissensportal/objektorientierung/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a> |
+                    <a href="/1.0.0/acp/wissensportal/objektorientierung/delete.php?id=<?php echo $snippet['id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
                 </td>
             </tr>
             <?php endforeach; ?>

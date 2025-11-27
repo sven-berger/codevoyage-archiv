@@ -1,7 +1,7 @@
 <?php
     $bereich = 'PHP-Bereich';
     $pageTitle = "DVD-Screensaver";
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/header/instance.header.inc.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/header/instance.header.inc.php");
 ?>
 
 <?php echo $section_beginn; ?>
@@ -44,5 +44,5 @@ svg {
 </style>
 
 <?php
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/footer/php.footer.inc.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/footer/php.footer.inc.php");
 ?>

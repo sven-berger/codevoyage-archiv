@@ -1,7 +1,7 @@
 <?php
     $bereich = 'PHP-Bereich';
     $pageTitle = "Eintrittspreise";
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/header/instance.header.inc.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/header/instance.header.inc.php");
 ?>
 
 <?php
@@ -64,5 +64,5 @@ try {
 
 
 <?php
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/footer/php.footer.inc.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/footer/php.footer.inc.php");
 ?>

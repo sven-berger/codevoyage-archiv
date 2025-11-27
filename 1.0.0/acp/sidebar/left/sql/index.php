@@ -16,15 +16,15 @@
                         <tr>
                             <td><?php echo htmlspecialchars($row['ziel']); ?></td>
                             <td>
-                                <a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/sql/edit.php?id=<?php echo htmlspecialchars($row['ID']); ?>">Bearbeiten</a> |
-                                <a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/sql/delete.php?id=<?php echo htmlspecialchars($row['ID']); ?>" onclick="return confirm('Bist du dir sicher, dass du diesen Eintrag löschen möchtest?');">Löschen</a>
+                                <a href="/1.0.0/acp/sidebar/left/sql/edit.php?id=<?php echo htmlspecialchars($row['ID']); ?>">Bearbeiten</a> |
+                                <a href="/1.0.0/acp/sidebar/left/sql/delete.php?id=<?php echo htmlspecialchars($row['ID']); ?>" onclick="return confirm('Bist du dir sicher, dass du diesen Eintrag löschen möchtest?');">Löschen</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 </table>
                 <div class="ActionArea">
                     <ul>
-                        <li><button class="button-action"><a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/sql/add.php">Eigene Lösung hinzufügen</a></button></li>
+                        <li><button class="button-action"><a href="/1.0.0/acp/sidebar/left/sql/add.php">Eigene Lösung hinzufügen</a></button></li>
                     </ul>
                 </div>
            <?php else : ?>

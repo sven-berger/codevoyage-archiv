@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $prepare->execute();
 
             echo 'Menüpunkt erfolgreich aktualisiert.';
-            header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/index.php");
+            header("Location: /1.0.0/acp/sidebar/left/acp/index.php");
             exit();
         } else {
             echo 'Bitte füllen Sie alle Felder aus.';

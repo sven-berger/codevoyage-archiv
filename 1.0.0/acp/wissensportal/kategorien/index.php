@@ -14,7 +14,7 @@
 
 <div class="ActionArea">
     <ul>
-        <li><button class="button-action"><a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/kategorien/add.php">Kategorie hinzufügen</a></button></li>
+        <li><button class="button-action"><a href="/1.0.0/acp/wissensportal/kategorien/add.php">Kategorie hinzufügen</a></button></li>
     </ul>
 </div>     
 <table>
@@ -29,8 +29,8 @@
         <tr>
             <td><?php echo htmlspecialchars($kategorie['name']); ?></td>
             <td>
-                <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/kategorien/edit.php?id=<?php echo htmlspecialchars($kategorie['id']); ?>">Bearbeiten</a> |
-                <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/kategorien/delete.php?id=<?php echo htmlspecialchars($kategorie['id']); ?>" onclick="return confirm('Sicher, dass du diese Kategorie löschen willst?');">Löschen</a>
+                <a href="/1.0.0/acp/wissensportal/kategorien/edit.php?id=<?php echo htmlspecialchars($kategorie['id']); ?>">Bearbeiten</a> |
+                <a href="/1.0.0/acp/wissensportal/kategorien/delete.php?id=<?php echo htmlspecialchars($kategorie['id']); ?>" onclick="return confirm('Sicher, dass du diese Kategorie löschen willst?');">Löschen</a>
             </td>
         </tr>
     <?php endforeach; ?>

@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $prepare->bindParam(':preis', $preis, PDO::PARAM_STR);
             $prepare->execute();
 
-            header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/eintrittspreise/index.php");
+            header("Location: /1.0.0/acp/eintrittspreise/index.php");
             exit();
         } else {
             echo 'Bitte füllen Sie alle Felder aus.';

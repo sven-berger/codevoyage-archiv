@@ -10,7 +10,7 @@
             $prepare = $connection->prepare('DELETE FROM `acp_sidebar_left_navigation_header` WHERE `ID` = :id');
             $prepare->bindParam(':id', $id, PDO::PARAM_INT);
             $prepare->execute();
-            header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/index.php");
+            header("Location: /1.0.0/acp/sidebar/left/acp/index.php");
             exit();
         } catch (PDOException $e) {
             echo 'Fehler beim Löschen: ' . $e->getMessage();

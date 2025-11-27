@@ -24,7 +24,7 @@ try {
     $sql = "DELETE FROM acp_sidebar_left_eigene_werke WHERE id = :id";
     $stmt = $connection->prepare($sql);
     $stmt->execute([':id' => $id]);
-    header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/codevoyage/index.php");
+    header("Location: /1.0.0/acp/sidebar/left/codevoyage/index.php");
     exit;
 
 } catch (PDOException $e) {

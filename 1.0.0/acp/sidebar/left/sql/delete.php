@@ -14,7 +14,7 @@ try {
     $sql = "DELETE FROM sidebar_left_sql_aufgaben WHERE id = :id";
     $stmt = $connection->prepare($sql);
     $stmt->execute([':id' => $id]);
-    header("Location: https://codevoyage.samwilliam.de/1.0.0https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/sqlindex.php");
+    header("Location: /1.0.0/1.0.0/acp/sidebar/left/sqlindex.php");
     exit;
 
 } catch (PDOException $e) {

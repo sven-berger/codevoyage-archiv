@@ -40,7 +40,7 @@ $alle_monate_zugewiesen = count(array_diff(array_keys($monate_zuweisung), $monat
 ?>
 
 <?php echo $section_beginn; ?>
-<p><a href="https://codevoyage.samwilliam.de/1.0.0/acp/umsatzrechner/2023/">2023</a> | <a href="https://codevoyage.samwilliam.de/1.0.0/acp/umsatzrechner/2024/">2024</a></p>
+<p><a href="/1.0.0/acp/umsatzrechner/2023/">2023</a> | <a href="/1.0.0/acp/umsatzrechner/2024/">2024</a></p>
 <?php echo $section_ende; ?>
 
 <?php echo $section_beginn; ?>
@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $prepare->bindParam(':umsatz', $umsatz, PDO::PARAM_STR);
             $prepare->execute();
 
-            header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/umsatzrechner/2023/index.php");
+            header("Location: /1.0.0/acp/umsatzrechner/2023/index.php");
             exit();
         } else {
             echo 'Bitte füllen Sie alle Felder aus.';
@@ -150,5 +150,5 @@ try {
 ?>
 
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/footer/acp.footer.inc.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/footer/acp.footer.inc.php");
 ?>

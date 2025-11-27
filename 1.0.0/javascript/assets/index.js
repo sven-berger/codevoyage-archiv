@@ -1,1 +1,2 @@
-document.write("Hallo und herzlich willkommen im JavaScript-Bereich!");
+document.getElementById("hallo").innerHTML =
+  "Willkommen im JavaScript-Bereich!";

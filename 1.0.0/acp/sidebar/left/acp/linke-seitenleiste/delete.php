@@ -18,7 +18,7 @@ try {
     $sql = "DELETE FROM acp_sidebar_left_seitenleiste WHERE id = :id";
     $stmt = $connection->prepare($sql);
     $stmt->execute([':id' => $id]);
-    header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/index.php");
+    header("Location: /1.0.0/acp/sidebar/left/acp/index.php");
     exit;
 
 } catch (PDOException $e) {

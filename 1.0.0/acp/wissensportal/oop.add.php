@@ -227,7 +227,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ':java_klasse_5_name' => $java_klasse_5_name,
                 ':java_klasse_5' => $java_klasse_5
                 ]);
-            header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/objektorientierung/");
+            header("Location: /1.0.0/acp/wissensportal/objektorientierung/");
         } catch (PDOException $e) {
             echo "Fehler beim Einfügen der Daten: " . htmlspecialchars($e->getMessage());
         }

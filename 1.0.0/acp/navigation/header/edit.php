@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $prepare->bindParam(':id', $id, PDO::PARAM_INT);
             $prepare->execute();
 
-            header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/navigation/header/index.php");
+            header("Location: /1.0.0/acp/navigation/header/index.php");
             exit();
         } else {
             echo 'Bitte füllen Sie alle Felder aus.';

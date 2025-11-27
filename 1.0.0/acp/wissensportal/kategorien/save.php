@@ -24,7 +24,7 @@ if (!empty($_POST['name'])) {
     $sql = "INSERT INTO wissensportal_kategorien (name) VALUES (:name)";
     $stmt = $connection->prepare($sql);
     $stmt->execute([':name' => $name]);
-    header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/kategorien/index.php");
+    header("Location: /1.0.0/acp/wissensportal/kategorien/index.php");
     exit;
 } else {
     echo 'Fehler: Kein Kategorienname angegeben.';

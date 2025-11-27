@@ -32,7 +32,7 @@
                 $prepare->execute();
 
                 echo 'Umsatz erfolgreich aktualisiert.';
-                header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/umsatzrechner/2023/index.php");
+                header("Location: /1.0.0/acp/umsatzrechner/2023/index.php");
                 exit();
             } catch (PDOException $e) {
                 echo 'Fehler beim Aktualisieren: ' . $e->getMessage();

@@ -5,9 +5,11 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/header/header.inc.php")
 ?>
 
 <form action="" method="post">
-    <label for="kategorie"><h3 class="section-title">Kategorie</h3></label>
+    <label for="kategorie">
+        <h3 class="section-title">Kategorie</h3>
+    </label>
     <select name="kategorie_id" id="kategorie_id" class="wissensportal-kategorien" required>
-    <?php
+        <?php
     $kategorien = $connection->query("SELECT id, name FROM wissensportal_kategorien ORDER BY id")->fetchAll(PDO::FETCH_ASSOC);
     foreach ($kategorien as $kategorie) {
         echo "<option value='{$kategorie['id']}'>" . htmlspecialchars($kategorie['name']) . "</option>";
@@ -15,37 +17,59 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/header/header.inc.php")
     ?>
     </select>
 
-    <label for="title"><h3 class="section-title">Titel</h3></label>
+    <label for="title">
+        <h3 class="section-title">Titel</h3>
+    </label>
     <input type="text" name="title" id="title" required>
 
-    <label for="url"><h3 class="section-title">URL</h3></label>
+    <label for="url">
+        <h3 class="section-title">URL</h3>
+    </label>
     <input type="text" name="url" id="url" required>
 
-    <label for="description"><h3 class="section-title">Beschreibung</h3></label>
+    <label for="description">
+        <h3 class="section-title">Beschreibung</h3>
+    </label>
     <textarea name="description" id="description"></textarea>
 
-    <label for="php_snippet"><h3 class="section-title">PHP-Snippet</h3></label>
+    <label for="php_snippet">
+        <h3 class="section-title">PHP-Snippet</h3>
+    </label>
     <textarea name="php_snippet" id="php_snippet"></textarea>
 
-    <label for="php_snippet_mit_html"><h3 class="section-title">PHP-Snippet mit HTML</h3></label>
+    <label for="php_snippet_mit_html">
+        <h3 class="section-title">PHP-Snippet mit HTML</h3>
+    </label>
     <textarea name="php_snippet_mit_html" id="php_snippet_mit_html"></textarea>
 
-    <label for="php_snippet_alternativ"><h3 class="section-title">PHP-Snippet (Alternative Syntax)</h3></label>
+    <label for="php_snippet_alternativ">
+        <h3 class="section-title">PHP-Snippet (Alternative Syntax)</h3>
+    </label>
     <textarea name="php_snippet_alternativ" id="php_snippet_alternativ"></textarea>
 
-    <label for="python_snippet"><h3 class="section-title">Python Snippet</h3></label>
+    <label for="python_snippet">
+        <h3 class="section-title">Python Snippet</h3>
+    </label>
     <textarea name="python_snippet" id="python_snippet"></textarea>
 
-    <label for="java_snippet"><h3 class="section-title">Java Snippet</h3></label>
+    <label for="java_snippet">
+        <h3 class="section-title">Java Snippet</h3>
+    </label>
     <textarea name="java_snippet" id="java_snippet"></textarea>
 
-    <label for="javascript_snippet"><h3 class="section-title">JavaScript Snippet</h3></label>
+    <label for="javascript_snippet">
+        <h3 class="section-title">JavaScript Snippet</h3>
+    </label>
     <textarea name="javascript_snippet" id="javascript_snippet"></textarea>
 
-    <label for="sql_snippet"><h3 class="section-title">(My)SQL Snippet</h3></label>
+    <label for="sql_snippet">
+        <h3 class="section-title">(My)SQL Snippet</h3>
+    </label>
     <textarea name="sql_snippet" id="sql_snippet"></textarea>
 
-    <label for="mitteilung_snippet"><h3 class="section-title">Mitteilung</h3></label>
+    <label for="mitteilung_snippet">
+        <h3 class="section-title">Mitteilung</h3>
+    </label>
     <textarea name="mitteilung_snippet" id="mitteilung_snippet"></textarea>
 
     <input type="submit" value="Speichern">
@@ -88,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ':kategorie_id' => $kategorie_id
             ]);
 
-            header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/index.php");
+            header("Location: /1.0.0/acp/wissensportal/index.php");
             exit();
         } catch (PDOException $e) {
             echo "Fehler beim Einfügen der Daten: " . htmlspecialchars($e->getMessage());

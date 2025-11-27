@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();
 
             echo 'Kategorie erfolgreich aktualisiert.';
-            header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/kategorien/index.php");
+            header("Location: /1.0.0/acp/wissensportal/kategorien/index.php");
             exit();
         } else {
             echo 'Bitte geben Sie einen Kategorienamen ein.';

@@ -1,11 +1,11 @@
 <?php
     $bereich = 'PHP-Bereich';
     $pageTitle = "Umsatzrechner für das Jahr 2024";
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/header/instance.header.inc.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/header/instance.header.inc.php");
 ?>
 
 <?php echo $section_beginn; ?>
-<p><a href="https://codevoyage.samwilliam.de/1.0.0/umsatzrechner_2023.php">2023</a> | <a href="https://codevoyage.samwilliam.de/1.0.0/umsatzrechner_2024.php">2024</a></p>
+<p><a href="/1.0.0/umsatzrechner_2023.php">2023</a> | <a href="/1.0.0/umsatzrechner_2024.php">2024</a></p>
 <?php echo $section_ende; ?>
 
 <?php
@@ -125,5 +125,5 @@ try {
 <?php endif; ?>
 
 <?php
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/footer/php.footer.inc.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/footer/php.footer.inc.php");
 ?>

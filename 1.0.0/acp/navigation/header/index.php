@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $prepare->execute();
 
             echo 'Menüpunkt erfolgreich eingetragen.';
-            header("Location: https://codevoyage.samwilliam.de/1.0.0/acp/navigation/header/index.php");
+            header("Location: /1.0.0/acp/navigation/header/index.php");
             exit();
         } else {
             echo 'Bitte füllen Sie alle Felder aus.';
@@ -65,31 +65,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<?php echo $section_beginn; ?>   
+<?php echo $section_beginn; ?>
 <?php try { ?>
-    <?php if (!empty($navigation_header_liste)) : ?>
-        <table>
-            <tr>   
-                <th>Reihenfolge</th>
-                <th>Name</th>
-                <th>Aktion</th>
-            </tr>
-            <?php foreach ($navigation_header_liste as $row) : ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($row['reihenfolge']); ?></td>
-                    <td><a href="<?php echo htmlspecialchars($row['url']); ?>"><?php echo htmlspecialchars($row['ziel']); ?></a></td>
-                    <td>
-                        <a href="/acp/navigation/header/edit.php?id=<?php echo htmlspecialchars($row['ID']); ?>">Bearbeiten</a> |
-                        <a href="/acp/navigation/header/delete.php?id=<?php echo htmlspecialchars($row['ID']); ?>" onclick="return confirm('Bist du dir sicher, dass du diesen Eintrag löschen möchtest?');">Löschen</a>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </table>
-    <?php else : ?>
-        <p style="text-align: center;">Keine Einträge gefunden.</p>
-    <?php endif; ?>
+<?php if (!empty($navigation_header_liste)) : ?>
+<table>
+    <tr>
+        <th>Reihenfolge</th>
+        <th>Name</th>
+        <th>Aktion</th>
+    </tr>
+    <?php foreach ($navigation_header_liste as $row) : ?>
+    <tr>
+        <td><?php echo htmlspecialchars($row['reihenfolge']); ?></td>
+        <td><a href="<?php echo htmlspecialchars($row['url']); ?>"><?php echo htmlspecialchars($row['ziel']); ?></a>
+        </td>
+        <td>
+            <a
+                href="/1.0.0/acp/navigation/header/edit.php?id=<?php echo htmlspecialchars($row['ID']); ?>">Bearbeiten</a>
+            |
+            <a href="/1.0.0/acp/navigation/header/delete.php?id=<?php echo htmlspecialchars($row['ID']); ?>"
+                onclick="return confirm('Bist du dir sicher, dass du diesen Eintrag löschen möchtest?');">Löschen</a>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+<?php else : ?>
+<p style="text-align: center;">Keine Einträge gefunden.</p>
+<?php endif; ?>
 <?php } catch (PDOException $e) { ?>
-    <p style="text-align: center;">Es liegt ein Problem vor: <?php echo htmlspecialchars($e->getMessage()); ?></p>
+<p style="text-align: center;">Es liegt ein Problem vor: <?php echo htmlspecialchars($e->getMessage()); ?></p>
 <?php } ?>
 <?php echo $section_ende; ?>
 

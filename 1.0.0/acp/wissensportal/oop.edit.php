@@ -96,7 +96,7 @@ try {
             ':id' => $id
         ]);
 
-        header("Location: https://codevoyage.samwilliam.de/1.0.0/wissensportal//index.php?oop_snippet=" . $snippet['url']);
+        header("Location: /1.0.0/wissensportal//index.php?oop_snippet=" . $snippet['url']);
         exit;
     }
     

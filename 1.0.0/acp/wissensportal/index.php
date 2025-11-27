@@ -6,8 +6,10 @@
 
 <div class="ActionArea">
     <ul>
-        <li><button class="button-action"><a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/add.php">Snippet hinzufügen</a></button></li>
-        <li><button class="button-action"><a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/oop.add.php">OOP-Snippet hinzufügen</a></button></li>
+        <li><button class="button-action"><a href="/1.0.0/acp/wissensportal/add.php">Snippet hinzufügen</a></button>
+        </li>
+        <li><button class="button-action"><a href="/1.0.0/acp/wissensportal/oop.add.php">OOP-Snippet
+                    hinzufügen</a></button></li>
 
     </ul>
 </div>
@@ -22,16 +24,20 @@
         </tr>
     </thead>
     <tbody>
-    <?php foreach ($variablen_snippets as $snippet): ?>
-            <tr>
-                <td><a href="<?php echo 'https://codevoyage.samwilliam.de/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
-                <td><?php echo htmlspecialchars($snippet['description']); ?></td>
-                <td>
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['wissensportal_id']; ?>">Bearbeiten</a> |
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['wissensportal_id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
-                </td>
-            </tr>
-    <?php endforeach; ?>
+        <?php foreach ($variablen_snippets as $snippet): ?>
+        <tr>
+            <td><a href="<?php echo '/1.0.0/wissensportal/index.php?snippet=' . htmlspecialchars($snippet['url']); ?>"
+                    target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
+            <td><?php echo htmlspecialchars($snippet['description']); ?></td>
+            <td>
+                <a
+                    href="/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['wissensportal_id']; ?>">Bearbeiten</a>
+                |
+                <a href="/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['wissensportal_id']; ?>"
+                    onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 
@@ -45,16 +51,20 @@
         </tr>
     </thead>
     <tbody>
-            <tr>
-                <?php foreach ($arrays_snippets as $snippet): ?>
-                <td><a href="<?php echo 'https://codevoyage.samwilliam.de/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
-                <td><?php echo htmlspecialchars($snippet['description']); ?></td>
-                <td>
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/acp/edit.php?id=<?php echo $snippet['wissensportal_id']; ?>">Bearbeiten</a> |
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['wissensportal_id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
-                </td>
-                <?php endforeach; ?>
-            </tr>
+        <tr>
+            <?php foreach ($arrays_snippets as $snippet): ?>
+            <td><a href="<?php echo '/1.0.0/wissensportal/index.php?snippet=' . htmlspecialchars($snippet['url']); ?>"
+                    target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
+            <td><?php echo htmlspecialchars($snippet['description']); ?></td>
+            <td>
+                <a
+                    href="/1.0.0/acp/wissensportal/acp/edit.php?id=<?php echo $snippet['wissensportal_id']; ?>">Bearbeiten</a>
+                |
+                <a href="/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['wissensportal_id']; ?>"
+                    onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
+            </td>
+            <?php endforeach; ?>
+        </tr>
     </tbody>
 </table>
 
@@ -68,16 +78,20 @@
         </tr>
     </thead>
     <tbody>
-            <?php foreach ($assoziatives_array_snippets as $snippet): ?>
-            <tr>
-                <td><a href="<?php echo 'https://codevoyage.samwilliam.de/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
-                <td><?php echo htmlspecialchars($snippet['description']); ?></td>
-                <td>
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['wissensportal_id']; ?>">Bearbeiten</a> |
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['wissensportal_id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
+        <?php foreach ($assoziatives_array_snippets as $snippet): ?>
+        <tr>
+            <td><a href="<?php echo '/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>"
+                    target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
+            <td><?php echo htmlspecialchars($snippet['description']); ?></td>
+            <td>
+                <a
+                    href="/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['wissensportal_id']; ?>">Bearbeiten</a>
+                |
+                <a href="/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['wissensportal_id']; ?>"
+                    onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 
@@ -91,16 +105,19 @@
         </tr>
     </thead>
     <tbody>
-            <?php foreach ($mehrdimensionales_array_snippets as $snippet): ?>
-            <tr>
-                <td><a href="<?php echo 'https://codevoyage.samwilliam.de/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
-                <td><?php echo htmlspecialchars($snippet['description']); ?></td>
-                <td>
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a> |
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
+        <?php foreach ($mehrdimensionales_array_snippets as $snippet): ?>
+        <tr>
+            <td><a href="<?php echo '/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>"
+                    target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
+            <td><?php echo htmlspecialchars($snippet['description']); ?></td>
+            <td>
+                <a href="/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a>
+                |
+                <a href="/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>"
+                    onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 
@@ -114,16 +131,19 @@
         </tr>
     </thead>
     <tbody>
-            <?php foreach ($for_snippets as $snippet): ?>
-            <tr>
-                <td><a href="<?php echo 'https://codevoyage.samwilliam.de/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
-                <td><?php echo htmlspecialchars($snippet['description']); ?></td>
-                <td>
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a> |
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
+        <?php foreach ($for_snippets as $snippet): ?>
+        <tr>
+            <td><a href="<?php echo '/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>"
+                    target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
+            <td><?php echo htmlspecialchars($snippet['description']); ?></td>
+            <td>
+                <a href="/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a>
+                |
+                <a href="/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>"
+                    onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 
@@ -137,16 +157,19 @@
         </tr>
     </thead>
     <tbody>
-            <?php foreach ($if_snippets as $snippet): ?>
-            <tr>
-                <td><a href="<?php echo 'https://codevoyage.samwilliam.de/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
-                <td><?php echo htmlspecialchars($snippet['description']); ?></td>
-                <td>
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a> |
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
+        <?php foreach ($if_snippets as $snippet): ?>
+        <tr>
+            <td><a href="<?php echo '/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>"
+                    target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
+            <td><?php echo htmlspecialchars($snippet['description']); ?></td>
+            <td>
+                <a href="/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a>
+                |
+                <a href="/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>"
+                    onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 
@@ -160,16 +183,19 @@
         </tr>
     </thead>
     <tbody>
-            <?php foreach ($funktionen_snippets as $snippet): ?>
-            <tr>
-                <td><a href="<?php echo 'https://codevoyage.samwilliam.de/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
-                <td><?php echo htmlspecialchars($snippet['description']); ?></td>
-                <td>
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a> |
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
+        <?php foreach ($funktionen_snippets as $snippet): ?>
+        <tr>
+            <td><a href="<?php echo '/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>"
+                    target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
+            <td><?php echo htmlspecialchars($snippet['description']); ?></td>
+            <td>
+                <a href="/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a>
+                |
+                <a href="/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>"
+                    onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 
@@ -182,15 +208,18 @@
         </tr>
     </thead>
     <tbody>
-            <?php foreach ($oop_snippets as $snippet): ?>
-            <tr>
-                <td><a href="<?php echo '../wissensportal/index.php?oop_snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
-                <td>
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/oop_edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a> |
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/oop_delete.php?id=<?php echo $snippet['id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
+        <?php foreach ($oop_snippets as $snippet): ?>
+        <tr>
+            <td><a href="<?php echo '../wissensportal/index.php?oop_snippet=' . htmlspecialchars($snippet['url']); ?>"
+                    target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
+            <td>
+                <a href="/1.0.0/acp/wissensportal/oop_edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a>
+                |
+                <a href="/1.0.0/acp/wissensportal/oop_delete.php?id=<?php echo $snippet['id']; ?>"
+                    onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 
@@ -204,16 +233,19 @@
         </tr>
     </thead>
     <tbody>
-            <?php foreach ($datenbanken_snippets as $snippet): ?>
-            <tr>
-                <td><a href="<?php echo 'https://codevoyage.samwilliam.de/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
-                <td><?php echo htmlspecialchars($snippet['description']); ?></td>
-                <td>
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a> |
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
+        <?php foreach ($datenbanken_snippets as $snippet): ?>
+        <tr>
+            <td><a href="<?php echo '/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>"
+                    target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
+            <td><?php echo htmlspecialchars($snippet['description']); ?></td>
+            <td>
+                <a href="/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a>
+                |
+                <a href="/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>"
+                    onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 
@@ -227,16 +259,19 @@
         </tr>
     </thead>
     <tbody>
-            <?php foreach ($vorlagen_snippets as $snippet): ?>
-            <tr>
-                <td><a href="<?php echo 'https://codevoyage.samwilliam.de/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
-                <td><?php echo htmlspecialchars($snippet['description']); ?></td>
-                <td>
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a> |
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
+        <?php foreach ($vorlagen_snippets as $snippet): ?>
+        <tr>
+            <td><a href="<?php echo '/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>"
+                    target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
+            <td><?php echo htmlspecialchars($snippet['description']); ?></td>
+            <td>
+                <a href="/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a>
+                |
+                <a href="/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>"
+                    onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 
@@ -250,16 +285,19 @@
         </tr>
     </thead>
     <tbody>
-            <?php foreach ($sonstiges_snippets as $snippet): ?>
-            <tr>
-                <td><a href="<?php echo 'https://codevoyage.samwilliam.de/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>" target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
-                <td><?php echo htmlspecialchars($snippet['description']); ?></td>
-                <td>
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a> |
-                    <a href="https://codevoyage.samwilliam.de/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>" onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
+        <?php foreach ($sonstiges_snippets as $snippet): ?>
+        <tr>
+            <td><a href="<?php echo '/1.0.0/wissensportal//index.php?snippet=' . htmlspecialchars($snippet['url']); ?>"
+                    target="_blank"><?php echo htmlspecialchars($snippet['title']); ?></a></td>
+            <td><?php echo htmlspecialchars($snippet['description']); ?></td>
+            <td>
+                <a href="/1.0.0/acp/wissensportal/edit.php?id=<?php echo $snippet['id']; ?>">Bearbeiten</a>
+                |
+                <a href="/1.0.0/acp/wissensportal/delete.php?id=<?php echo $snippet['id']; ?>"
+                    onclick="return confirm('Sicher, dass du dieses Snippet löschen willst?');">Löschen</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 

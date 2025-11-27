@@ -12,7 +12,7 @@ ini_set('display_errors', 1);
     <div class="sectionContent">
     <div class="ActionArea">
         <ul>
-            <li><button class="button-action"><a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/navigation/add.php">Menüpunkt hinzufügen</a></button></li>
+            <li><button class="button-action"><a href="/1.0.0/acp/sidebar/left/acp/navigation/add.php">Menüpunkt hinzufügen</a></button></li>
         </ul>
     </div>      
         <?php try { ?>
@@ -26,8 +26,8 @@ ini_set('display_errors', 1);
                         <tr>
                             <td><a href='<?php echo htmlspecialchars($row['url']); ?>' ><?php echo htmlspecialchars($row['ziel']); ?></a></td>
                             <td>
-                                <a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/navigation/edit.php?id=<?php echo htmlspecialchars($row['ID']); ?>">Bearbeiten</a> |
-                                <a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/navigation/delete.php?id=<?php echo htmlspecialchars($row['ID']); ?>" onclick="return confirm('Bist du dir sicher, dass du diesen Eintrag löschen möchtest?');">Löschen</a>
+                                <a href="/1.0.0/acp/sidebar/left/acp/navigation/edit.php?id=<?php echo htmlspecialchars($row['ID']); ?>">Bearbeiten</a> |
+                                <a href="/1.0.0/acp/sidebar/left/acp/navigation/delete.php?id=<?php echo htmlspecialchars($row['ID']); ?>" onclick="return confirm('Bist du dir sicher, dass du diesen Eintrag löschen möchtest?');">Löschen</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -46,7 +46,7 @@ ini_set('display_errors', 1);
     <div class="sectionContent">
     <div class="ActionArea">
         <ul>
-            <li><button class="button-action"><a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/linke-seitenleiste/add.php">Menüpunkt hinzufügen</a></button></li>
+            <li><button class="button-action"><a href="/1.0.0/acp/sidebar/left/acp/linke-seitenleiste/add.php">Menüpunkt hinzufügen</a></button></li>
         </ul>
     </div>      
         <?php try { ?>
@@ -60,8 +60,8 @@ ini_set('display_errors', 1);
                         <tr>
                             <td><a href='<?php echo htmlspecialchars($row['url']); ?>' ><?php echo htmlspecialchars($row['ziel']); ?></a></td>
                             <td>
-                                <a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/linke-seitenleiste/edit.php?id=<?php echo htmlspecialchars($row['ID']); ?>">Bearbeiten</a> |
-                                <a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/linke-seitenleiste/delete.php?id=<?php echo htmlspecialchars($row['ID']); ?>" onclick="return confirm('Bist du dir sicher, dass du diesen Eintrag löschen möchtest?');">Löschen</a>
+                                <a href="/1.0.0/acp/sidebar/left/acp/linke-seitenleiste/edit.php?id=<?php echo htmlspecialchars($row['ID']); ?>">Bearbeiten</a> |
+                                <a href="/1.0.0/acp/sidebar/left/acp/linke-seitenleiste/delete.php?id=<?php echo htmlspecialchars($row['ID']); ?>" onclick="return confirm('Bist du dir sicher, dass du diesen Eintrag löschen möchtest?');">Löschen</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -80,7 +80,7 @@ ini_set('display_errors', 1);
     <div class="sectionContent">
     <div class="ActionArea">
         <ul>
-            <li><button class="button-action"><a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/eigene-werke/add.php">Menüpunkt hinzufügen</a></button></li>
+            <li><button class="button-action"><a href="/1.0.0/acp/sidebar/left/acp/eigene-werke/add.php">Menüpunkt hinzufügen</a></button></li>
         </ul>
     </div>       
         <?php try { ?>
@@ -94,8 +94,8 @@ ini_set('display_errors', 1);
                         <tr>
                             <td><a href='<?php echo htmlspecialchars($row['url']); ?>' ><?php echo htmlspecialchars($row['ziel']); ?></a></td>
                             <td>
-                                <a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/eigene-werke/edit.php?id=<?php echo htmlspecialchars($row['ID']); ?>">Bearbeiten</a> |
-                                <a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/eigene-werke/delete.php?id=<?php echo htmlspecialchars($row['ID']); ?>" onclick="return confirm('Bist du dir sicher, dass du diesen Eintrag löschen möchtest?');">Löschen</a>
+                                <a href="/1.0.0/acp/sidebar/left/acp/eigene-werke/edit.php?id=<?php echo htmlspecialchars($row['ID']); ?>">Bearbeiten</a> |
+                                <a href="/1.0.0/acp/sidebar/left/acp/eigene-werke/delete.php?id=<?php echo htmlspecialchars($row['ID']); ?>" onclick="return confirm('Bist du dir sicher, dass du diesen Eintrag löschen möchtest?');">Löschen</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -114,7 +114,7 @@ ini_set('display_errors', 1);
     <div class="sectionContent">
     <div class="ActionArea">
         <ul>
-            <li><button class="button-action"><a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/wissensportal/add.php">Menüpunkt hinzufügen</a></button></li>
+            <li><button class="button-action"><a href="/1.0.0/acp/sidebar/left/acp/wissensportal/add.php">Menüpunkt hinzufügen</a></button></li>
         </ul>
     </div>    
         <?php try { ?>
@@ -128,8 +128,8 @@ ini_set('display_errors', 1);
                         <tr>
                             <td><a href='<?php echo htmlspecialchars($row['url']); ?>' ><?php echo htmlspecialchars($row['ziel']); ?></a></td>
                             <td>
-                                <a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/wissensportal/edit.php?id=<?php echo htmlspecialchars($row['ID']); ?>">Bearbeiten</a> |
-                                <a href="https://codevoyage.samwilliam.de/1.0.0/acp/sidebar/left/acp/wissensportal/delete.php?id=<?php echo htmlspecialchars($row['ID']); ?>" onclick="return confirm('Bist du dir sicher, dass du diesen Eintrag löschen möchtest?');">Löschen</a>
+                                <a href="/1.0.0/acp/sidebar/left/acp/wissensportal/edit.php?id=<?php echo htmlspecialchars($row['ID']); ?>">Bearbeiten</a> |
+                                <a href="/1.0.0/acp/sidebar/left/acp/wissensportal/delete.php?id=<?php echo htmlspecialchars($row['ID']); ?>" onclick="return confirm('Bist du dir sicher, dass du diesen Eintrag löschen möchtest?');">Löschen</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

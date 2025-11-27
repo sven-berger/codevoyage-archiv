@@ -2,7 +2,7 @@
     $bereich = 'Startseite';
     $pageTitle = 'Startseite von CodeVoyage.de';
     require_once ("layout/header/header.inc.php");
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/header/header.inc.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/header/header.inc.php");
 
 ?>
 
@@ -29,5 +29,5 @@ $ausgabe = $connection->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 </table>
 
 <?php
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/footer/index.footer.inc.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/footer/index.footer.inc.php");
 ?>

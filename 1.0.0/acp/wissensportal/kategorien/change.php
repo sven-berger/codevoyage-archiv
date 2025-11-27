@@ -1,7 +1,7 @@
 <?php
 $bereich = 'Administrationsbereich';
 $pageTitle = 'Snippet hinzufügen';
-require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/header/header.inc.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/header/header.inc.php");
 
 $sql = "
 ALTER TABLE `wissensportal`
@@ -15,5 +15,5 @@ try {
     exit();
 }
 
-require_once ($_SERVER['DOCUMENT_ROOT'] . "//1.0.0/layout/footer/acp.footer.inc.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/1.0.0/layout/footer/acp.footer.inc.php");
 

@@ -1,8 +1,7 @@
 <?php
-
-$dsn = "mysql:host=j3us.your-database.de;dbname=codevoyage";
+$dsn = "mysql:host=server14.febas.net;dbname=CodeVoyage";
 $username = "codevoyage";
-$password = "ta86E8eFhWJYk254";
+$password = "biUs=othucajKid>";
 
 try {
     $connection = new PDO($dsn, $username, $password);
@@ -11,7 +10,6 @@ try {
     echo 'Es liegt ein Problem bei der Datenbankverbindung vor: ' . "<br/><br/>";
     echo "<pre>" . var_dump($e) . "</pre>";
 }
-
 
 // ACP //
 $acp_sidebar_left_navigation_header = "SELECT * FROM `acp_sidebar_left_navigation_header`";

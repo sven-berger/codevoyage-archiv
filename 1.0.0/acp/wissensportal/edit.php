@@ -64,7 +64,7 @@ try {
             ':id' => $id
         ]);
 
-        header("Location: https://codevoyage.samwilliam.de/1.0.0/wissensportal//index.php?snippet=" . urlencode($url));
+        header("Location: /1.0.0/wissensportal//index.php?snippet=" . urlencode($url));
         exit;
     }
 } catch (PDOException $e) {
@@ -78,10 +78,10 @@ try {
     <label for="kategorie_id">Kategorie:</label>
     <select name="kategorie_id" id="kategorie_id">
         <?php foreach ($kategorien as $kategorie): ?>
-            <option value="<?= htmlspecialchars($kategorie['id']) ?>" 
-                <?= $kategorie['id'] == $snippet['kategorie_id'] ? 'selected' : '' ?>>
-                <?= htmlspecialchars($kategorie['name']) ?>
-            </option>
+        <option value="<?= htmlspecialchars($kategorie['id']) ?>"
+            <?= $kategorie['id'] == $snippet['kategorie_id'] ? 'selected' : '' ?>>
+            <?= htmlspecialchars($kategorie['name']) ?>
+        </option>
         <?php endforeach; ?>
     </select>
 
@@ -98,10 +98,12 @@ try {
     <textarea name="php_snippet" id="php_snippet"><?= htmlspecialchars($snippet['php_snippet']) ?></textarea>
 
     <label for="php_snippet_mit_html">PHP-Snippet mit HTML:</label>
-    <textarea name="php_snippet_mit_html" id="php_snippet_mit_html"><?= htmlspecialchars($snippet['php_snippet_mit_html']) ?></textarea>
+    <textarea name="php_snippet_mit_html"
+        id="php_snippet_mit_html"><?= htmlspecialchars($snippet['php_snippet_mit_html']) ?></textarea>
 
     <label for="php_snippet_alternativ">PHP-Snippet Alternativ:</label>
-    <textarea name="php_snippet_alternativ" id="php_snippet_alternativ"><?= htmlspecialchars($snippet['php_snippet_alternativ']) ?></textarea>
+    <textarea name="php_snippet_alternativ"
+        id="php_snippet_alternativ"><?= htmlspecialchars($snippet['php_snippet_alternativ']) ?></textarea>
 
     <label for="python_snippet">Python-Snippet:</label>
     <textarea name="python_snippet" id="python_snippet"><?= htmlspecialchars($snippet['python_snippet']) ?></textarea>
@@ -110,13 +112,15 @@ try {
     <textarea name="java_snippet" id="java_snippet"><?= htmlspecialchars($snippet['java_snippet']) ?></textarea>
 
     <label for="javascript_snippet">JavaScript-Snippet:</label>
-    <textarea name="javascript_snippet" id="javascript_snippet"><?= htmlspecialchars($snippet['javascript_snippet']) ?></textarea>
+    <textarea name="javascript_snippet"
+        id="javascript_snippet"><?= htmlspecialchars($snippet['javascript_snippet']) ?></textarea>
 
     <label for="sql_snippet">(My)SQL-Snippet:</label>
     <textarea name="sql_snippet" id="sql_snippet"><?= htmlspecialchars($snippet['sql_snippet']) ?></textarea>
 
     <label for="mitteilung_snippet">Mitteilung:</label>
-    <textarea name="mitteilung_snippet" id="mitteilung_snippet"><?= htmlspecialchars($snippet['mitteilung_snippet']) ?></textarea>
+    <textarea name="mitteilung_snippet"
+        id="mitteilung_snippet"><?= htmlspecialchars($snippet['mitteilung_snippet']) ?></textarea>
 
     <button type="submit">Speichern</button>
 </form>
