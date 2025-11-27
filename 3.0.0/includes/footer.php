@@ -18,24 +18,24 @@ if (isset($_GET['page'])) {
 <div class="page-function">
     <ul>
         <li>
-            <button><a href="/acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite
+            <button><a href="../acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite
                     bearbeiten</a></button>
         </li>
     </ul>
 </div>
-<?php endif; ?>
+<?php endif ;?>
 <?php else: ?>
 <?php $gelistetAufGitHub = true; ?>
 <?php endif; ?>
 
 <?php if ($gelistetAufGitHub): ?>
-<?php
-    $gitHubMain = "https://github.com/sven-berger/codevoyage/blob/main/lib";
-    $gitHubLinks = [
-        "Bibliothek" => "<a href='{$gitHubMain}/pages/{$page}.page.php' target='_blank' class='link-success fw-bolder'>{$page}.lib.php</a>",
-        "Klasse" => "<a href='{$gitHubMain}/class/{$page}.class.php' target='_blank' class='link-success fw-bolder'>{$page}.class.php</a>",
-        "Formular" => "<a href='{$gitHubMain}/forms/{$page}.form.php' target='_blank' class='link-success fw-bolder'>{$page}.form.php</a>",
-    ];
+<?php 
+        $gitHubMain = "https://github.com/sven-berger/codevoyage/blob/main/lib";
+        $gitHubLinks = [
+            "Bibliothek" => "<a href='{$gitHubMain}/pages/{$page}.page.php' target='_blank' class='link-success fw-bolder'>{$page}.lib.php</a>",
+            "Klasse" => "<a href='{$gitHubMain}/class/{$page}.class.php' target='_blank' class='link-success fw-bolder'>{$page}.class.php</a>",
+            "Formular" => "<a href='{$gitHubMain}/forms/{$page}.form.php' target='_blank' class='link-success fw-bolder'>{$page}.form.php</a>",
+        ];
     ?>
 <div class="gelistetAufGitHub bg-white border p-3 rounded-3">
     <h6>Dateien auf GitHub</h4>
@@ -58,7 +58,7 @@ tinymce.init({
     license_key: 'gpl',
     content_css: [
         '/4.0.0/highlightjs/styles/default.min.css',
-        '/4.0.0/styles/te-editor.css'
+        '/2.0.0/styles/te-editor.css'
     ],
     menubar: false,
     language: 'de',

@@ -7,19 +7,21 @@
             <li class="nav-item"><a href="index.php?page=raffle" class="nav-link">Mini-Gewinnspiel</a></li>
             <li class="nav-item"><a href="index.php?page=bankaccounts" class="nav-link">Bankkonten</a></li> -->
             <li class="nav-item"><a href="index.php?page=ortsliste" class="nav-link">Ortsliste (Deutschland)</a></li>
-            <li class="nav-item"><a href="index.php?page=zeitzonen" class="nav-link">Zeitzonen <strong>(1.0 Alpha 1)</strong></a></li>
+            <li class="nav-item"><a href="index.php?page=zeitzonen" class="nav-link">Zeitzonen <strong>(1.0 Alpha
+                        1)</strong></a></li>
         </ul>
         <h6 class="mb-3">Spielerein</h5>
-        <ul class="list-unstyled">
-            <li class="nav-item"><a href="https://samwilliam.de/web-kompakt/" class="nav-link">Webentwicklung kompakt</a></li>
-        </ul>
-        <!---
+            <ul class="list-unstyled">
+                <li class="nav-item"><a href="https://samwilliam.riftcore.de/web-kompakt/"
+                        class="nav-link">Webentwicklung kompakt</a></li>
+            </ul>
+            <!---
         <h6 class="mb-3">Sonstiges</h5>
         <ul class="list-unstyled">
             <li class="nav-item"><a href="index.php?page=einbindung-tinymce" class="nav-link">Einbindung: TinyMCE Editor</a></li>
         </ul> -->
     </nav>
-    
+
     <nav class="nav2 text-white p-3">
         <form method="POST" action="" class="d-flex flex-column">
             <div class="mb-3">
@@ -34,6 +36,6 @@
             <button type="reset" class="mb-2 btn btn-secondary">Passwort vergessen</button>
             <a href="register.html" class="mb-2 btn btn-danger">Registrieren</a>
             <a href="../v1/" class="mb-2 btn btn-warning" style="margin-top: 20px;">Alte Webseite</a>
-        </form> 
+        </form>
     </nav>
 </div>

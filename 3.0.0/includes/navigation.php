@@ -1,4 +1,4 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/4.0.0/lib/class/now.class.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/3.0.0/lib/class/now.class.php"); ?>
 <div class="row">
     <div class="col-md-6 mb-3">
         <div class="nav menu text-white">
@@ -7,7 +7,8 @@
                 <li class="nav-item"><a href="index.php?page=about" class="nav-link">Über mich</a></li>
                 <li class="nav-item"><a href="index.php?page=kontakt" class="nav-link">Kontakt</a></li>
                 <li class="nav-item"><a href="index.php?page=impressum" class="nav-link">Impressum</a></li>
-                <li class="nav-item"><a href="index.php?page=datenschutzerklaerung" class="nav-link">Datenschutzerklärung</a></li>
+                <li class="nav-item"><a href="index.php?page=datenschutzerklaerung"
+                        class="nav-link">Datenschutzerklärung</a></li>
             </ul>
         </div>
     </div>
