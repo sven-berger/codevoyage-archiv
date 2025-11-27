@@ -48,18 +48,18 @@ if (isset($_GET['page'])) {
 </div>
 </div>
 <!-- TinyMCE-Editor einbinden -->
-<script src="/3.0.0/assets/tinymce/tinymce.min.js"></script>
+<script src="/4.0.0/assets/tinymce/tinymce.min.js"></script>
 <script>
     tinymce.init({
         selector: 'textarea',
         license_key: 'gpl',
         content_css: [
-            'h/3.0.0/assets/highlightjs/styles/default.min.css',
+            'h/4.0.0/assets/highlightjs/styles/default.min.css',
             '/2.0.0/styles/tm-editor.css'
         ],
         menubar: false,
         language: 'de',
-        language_url: '/3.0.0/assets/tinymce/langs/de.js',
+        language_url: '/4.0.0/assets/tinymce/langs/de.js',
         plugins: 'code table lists fullscreen wordcount link image autosave advlist codesample preview',
         toolbar: 'code undo redo | bold italic | blocks | link image codesample table blockquote | bullist numlist | alignleft aligncenter alignright removeformat preview',
         fontsize_formats: "10pt 12pt 14pt 16pt 18pt 24pt 36pt"

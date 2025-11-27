@@ -18,8 +18,7 @@ if (isset($_GET['page'])) {
 <div class="page-function">
     <ul>
         <li>
-            <button><a
-                    href="../2.0.0/acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite
+            <button><a href="/2.0.0/acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">Seite
                     bearbeiten</a></button>
         </li>
     </ul>
@@ -51,7 +50,7 @@ if (isset($_GET['page'])) {
 </div>
 
 <!-- TinyMCE-Editor einbinden -->
-<script src="/3.0.0/assets/tinymce/tinymce.min.js"></script>
+<script src="/4.0.0/assets/tinymce/tinymce.min.js"></script>
 <script>
 tinymce.init({
     selector: 'textarea',
