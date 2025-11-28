@@ -1,5 +1,6 @@
-/*! `css` grammar compiled for Highlight.js 11.11.1 */
-var hljsGrammar = (function () {
+/*! `scss` grammar compiled for Highlight.js 11.11.1 */
+  (function(){
+    var hljsGrammar = (function () {
   'use strict';
 
   const MODES = (hljs) => {
@@ -815,143 +816,134 @@ var hljsGrammar = (function () {
   ].sort().reverse();
 
   /*
-  Language: CSS
+  Language: SCSS
+  Description: Scss is an extension of the syntax of CSS.
+  Author: Kurt Emch <kurt@kurtemch.com>
+  Website: https://sass-lang.com
   Category: common, css, web
-  Website: https://developer.mozilla.org/en-US/docs/Web/CSS
   */
 
 
   /** @type LanguageFn */
-  function css(hljs) {
-    const regex = hljs.regex;
+  function scss(hljs) {
     const modes = MODES(hljs);
-    const VENDOR_PREFIX = { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ };
+    const PSEUDO_ELEMENTS$1 = PSEUDO_ELEMENTS;
+    const PSEUDO_CLASSES$1 = PSEUDO_CLASSES;
+
+    const AT_IDENTIFIER = '@[a-z-]+'; // @font-face
     const AT_MODIFIERS = "and or not only";
-    const AT_PROPERTY_RE = /@-?\w[\w]*(-\w+)*/; // @-webkit-keyframes
     const IDENT_RE = '[a-zA-Z-][a-zA-Z0-9_-]*';
-    const STRINGS = [
-      hljs.APOS_STRING_MODE,
-      hljs.QUOTE_STRING_MODE
-    ];
+    const VARIABLE = {
+      className: 'variable',
+      begin: '(\\$' + IDENT_RE + ')\\b',
+      relevance: 0
+    };
 
     return {
-      name: 'CSS',
+      name: 'SCSS',
       case_insensitive: true,
-      illegal: /[=|'\$]/,
-      keywords: { keyframePosition: "from to" },
-      classNameAliases: {
-        // for visual continuity with `tag {}` and because we
-        // don't have a great class for this?
-        keyframePosition: "selector-tag" },
+      illegal: '[=/|\']',
       contains: [
-        modes.BLOCK_COMMENT,
-        VENDOR_PREFIX,
+        hljs.C_LINE_COMMENT_MODE,
+        hljs.C_BLOCK_COMMENT_MODE,
         // to recognize keyframe 40% etc which are outside the scope of our
         // attribute value mode
         modes.CSS_NUMBER_MODE,
         {
           className: 'selector-id',
-          begin: /#[A-Za-z0-9_-]+/,
+          begin: '#[A-Za-z0-9_-]+',
           relevance: 0
         },
         {
           className: 'selector-class',
-          begin: '\\.' + IDENT_RE,
+          begin: '\\.[A-Za-z0-9_-]+',
           relevance: 0
         },
         modes.ATTRIBUTE_SELECTOR_MODE,
         {
-          className: 'selector-pseudo',
-          variants: [
-            { begin: ':(' + PSEUDO_CLASSES.join('|') + ')' },
-            { begin: ':(:)?(' + PSEUDO_ELEMENTS.join('|') + ')' }
-          ]
+          className: 'selector-tag',
+          begin: '\\b(' + TAGS.join('|') + ')\\b',
+          // was there, before, but why?
+          relevance: 0
         },
-        // we may actually need this (12/2020)
-        // { // pseudo-selector params
-        //   begin: /\(/,
-        //   end: /\)/,
-        //   contains: [ hljs.CSS_NUMBER_MODE ]
-        // },
+        {
+          className: 'selector-pseudo',
+          begin: ':(' + PSEUDO_CLASSES$1.join('|') + ')'
+        },
+        {
+          className: 'selector-pseudo',
+          begin: ':(:)?(' + PSEUDO_ELEMENTS$1.join('|') + ')'
+        },
+        VARIABLE,
+        { // pseudo-selector params
+          begin: /\(/,
+          end: /\)/,
+          contains: [ modes.CSS_NUMBER_MODE ]
+        },
         modes.CSS_VARIABLE,
         {
           className: 'attribute',
           begin: '\\b(' + ATTRIBUTES.join('|') + ')\\b'
         },
-        // attribute values
+        { begin: '\\b(whitespace|wait|w-resize|visible|vertical-text|vertical-ideographic|uppercase|upper-roman|upper-alpha|underline|transparent|top|thin|thick|text|text-top|text-bottom|tb-rl|table-header-group|table-footer-group|sw-resize|super|strict|static|square|solid|small-caps|separate|se-resize|scroll|s-resize|rtl|row-resize|ridge|right|repeat|repeat-y|repeat-x|relative|progress|pointer|overline|outside|outset|oblique|nowrap|not-allowed|normal|none|nw-resize|no-repeat|no-drop|newspaper|ne-resize|n-resize|move|middle|medium|ltr|lr-tb|lowercase|lower-roman|lower-alpha|loose|list-item|line|line-through|line-edge|lighter|left|keep-all|justify|italic|inter-word|inter-ideograph|inside|inset|inline|inline-block|inherit|inactive|ideograph-space|ideograph-parenthesis|ideograph-numeric|ideograph-alpha|horizontal|hidden|help|hand|groove|fixed|ellipsis|e-resize|double|dotted|distribute|distribute-space|distribute-letter|distribute-all-lines|disc|disabled|default|decimal|dashed|crosshair|collapse|col-resize|circle|char|center|capitalize|break-word|break-all|bottom|both|bolder|bold|block|bidi-override|below|baseline|auto|always|all-scroll|absolute|table|table-cell)\\b' },
         {
           begin: /:/,
           end: /[;}{]/,
+          relevance: 0,
           contains: [
             modes.BLOCK_COMMENT,
+            VARIABLE,
             modes.HEXCOLOR,
-            modes.IMPORTANT,
             modes.CSS_NUMBER_MODE,
-            ...STRINGS,
-            // needed to highlight these as strings and to avoid issues with
-            // illegal characters that might be inside urls that would tigger the
-            // languages illegal stack
-            {
-              begin: /(url|data-uri)\(/,
-              end: /\)/,
-              relevance: 0, // from keywords
-              keywords: { built_in: "url data-uri" },
-              contains: [
-                ...STRINGS,
-                {
-                  className: "string",
-                  // any character other than `)` as in `url()` will be the start
-                  // of a string, which ends with `)` (from the parent mode)
-                  begin: /[^)]/,
-                  endsWithParent: true,
-                  excludeEnd: true
-                }
-              ]
-            },
+            hljs.QUOTE_STRING_MODE,
+            hljs.APOS_STRING_MODE,
+            modes.IMPORTANT,
             modes.FUNCTION_DISPATCH
           ]
         },
+        // matching these here allows us to treat them more like regular CSS
+        // rules so everything between the {} gets regular rule highlighting,
+        // which is what we want for page and font-face
         {
-          begin: regex.lookahead(/@/),
-          end: '[{;]',
-          relevance: 0,
-          illegal: /:/, // break on Less variables @var: ...
-          contains: [
-            {
-              className: 'keyword',
-              begin: AT_PROPERTY_RE
-            },
-            {
-              begin: /\s/,
-              endsWithParent: true,
-              excludeEnd: true,
-              relevance: 0,
-              keywords: {
-                $pattern: /[a-z-]+/,
-                keyword: AT_MODIFIERS,
-                attribute: MEDIA_FEATURES.join(" ")
-              },
-              contains: [
-                {
-                  begin: /[a-z-]+(?=:)/,
-                  className: "attribute"
-                },
-                ...STRINGS,
-                modes.CSS_NUMBER_MODE
-              ]
-            }
-          ]
+          begin: '@(page|font-face)',
+          keywords: {
+            $pattern: AT_IDENTIFIER,
+            keyword: '@page @font-face'
+          }
         },
         {
-          className: 'selector-tag',
-          begin: '\\b(' + TAGS.join('|') + ')\\b'
-        }
+          begin: '@',
+          end: '[{;]',
+          returnBegin: true,
+          keywords: {
+            $pattern: /[a-z-]+/,
+            keyword: AT_MODIFIERS,
+            attribute: MEDIA_FEATURES.join(" ")
+          },
+          contains: [
+            {
+              begin: AT_IDENTIFIER,
+              className: "keyword"
+            },
+            {
+              begin: /[a-z-]+(?=:)/,
+              className: "attribute"
+            },
+            VARIABLE,
+            hljs.QUOTE_STRING_MODE,
+            hljs.APOS_STRING_MODE,
+            modes.HEXCOLOR,
+            modes.CSS_NUMBER_MODE
+          ]
+        },
+        modes.FUNCTION_DISPATCH
       ]
     };
   }
 
-  return css;
+  return scss;
 
 })();
-;
-export default hljsGrammar;
+
+    hljs.registerLanguage('scss', hljsGrammar);
+  })();
