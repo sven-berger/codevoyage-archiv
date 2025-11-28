@@ -65,6 +65,12 @@ if (isset($_GET['page'])) {
         fontsize_formats: "10pt 12pt 14pt 16pt 18pt 24pt 36pt"
     });
 </script>
+
+<!-- HightLight.js einbinden -->
+<link rel="stylesheet" href="/4.0.0/assets/highlightjs/styles/default.min.css">
+<script>
+    hljs.highlightAll();
+</script>
 </body>
 
 </html>

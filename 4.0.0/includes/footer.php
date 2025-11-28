@@ -8,8 +8,8 @@
 <!-- Bootstrap Bundle mit Popper einbinden -->
 <script src="/4.0.0/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- HightLight.js einbinden -->
-<link rel="stylesheet" href="/4.0.0/assets/highlightjs/styles/default.min.css">
+<!-- Highlight.js -->
+<link rel="stylesheet" href="/4.0.0/assets/highlightjs/styles/github.min.css">
 <script src="/4.0.0/assets/highlightjs/highlight.min.js"></script>
 <script>
   hljs.highlightAll();

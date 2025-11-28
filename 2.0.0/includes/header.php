@@ -11,12 +11,6 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/2.0.0/includes/session.php"); ?>
     <!-- Font Awesome 6 Free einbinden -->
     <link rel="stylesheet" href="/4.0.0/assets/fontawesome/css/all.min.css">
 
-    <!-- HightLight.js einbinden -->
-    <link rel="stylesheet" href="/4.0.0/assets/highlightjs/styles/default.min.css">
-    <script>
-    hljs.highlightAll();
-    </script>
-
     <!-- Angelegte Stylesheets einbinden -->
     <link rel="stylesheet " href="/2.0.0/styles/editor.css">
     <link rel="stylesheet" href="/2.0.0/styles/styles.css">
